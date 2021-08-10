@@ -1,0 +1,16 @@
+.mentorship {
+  .content-text {
+    font-size: medium;
+  }
+  .list-points {
+    i {
+      color: $primaryColor;
+    }
+    display: flex;
+    font-weight: 400;
+  }
+  .join-smp-card {
+    background-color: $bgColor;
+    min-height: 17rem;
+  }
+}
