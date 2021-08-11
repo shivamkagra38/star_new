@@ -16,7 +16,7 @@ app.use(express.static("views/static"));
 
 // Writing the data into the spreadsheets
 
-let count = 2;
+let count = 2;  
 
 let register = 2;
 
