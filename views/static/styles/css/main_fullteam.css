@@ -1,0 +1,49 @@
+.imageLogo {
+  display: flex;
+  justify-content: center;
+}
+.imageLogoFile{
+  height: 250px;
+  width: 250px;
+}
+.outer-container{
+  height: 350px;
+  width: 300px;
+  background-color: red;
+  border-radius: 25px;
+  position: relative;
+  margin: 15px;
+}
+.photoFrame {
+  width: 100%;
+}
+
+.main-container {
+  margin: 20px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.image{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+.name{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: black;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 500;
+}
+
+.outer-container:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.white{
+  color: white !important;
+}

@@ -137,6 +137,10 @@ app.get("/mentorship", (req, res) => {
   res.render("mentorship-program");
 });
 
+app.get("/fullteam", (req, res)=>{
+  res.render("FullTeam");
+})
+
 app.listen(process.env.PORT || 4500, function () {
   console.log("Server running at port 4500");
 });
