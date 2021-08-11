@@ -33,6 +33,11 @@
   src: url("../assets/fonts/nunito/NunitoSans-Black.ttf");
 }
 
+.display-in-center{
+  display: flex;
+  justify-content: center;
+}
+
 body {
   overflow-x: hidden;
 }
