@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/css/main_fullteam.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+<style>
+body{
+	
+	background: rgb(235,39,39);
+    background: linear-gradient(90deg, rgba(235,39,39,1) 0%, rgba(26,49,65,1) 100%);
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	flex-direction: column;
+    font-family: sans-serif;
+    font-weight: 100;
+	height: 100vh;
+}
+
+h1{
+    font-size: 48px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="imageLogo">
+		<img src="images/starLogo.png" class="imageLogoFile"/>
+	</div>
+    
+    <h1>Because every member matters</h3>
+    <div class="photoFrame">
+        <div class="main-container">
+            <div class="outer-container">
+                <img src="images/fullteam/aarushi.jpeg" class="image"/>
+                <h6 class="name">Aarushi</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/piyush.jpeg" class="image"/>
+                <h6 class="name white">Piyush</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/disha.jpeg" class="image"/>
+                <h6 class="name">Disha</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/jaswinder.jpeg" class="image"/>
+                <h6 class="name white">jaswinder</h6>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="outer-container">
+                <img src="images/fullteam/himanshu.jpeg" class="image"/>
+                <h6 class="name">Himanshu</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/prayas.jpeg" class="image"/>
+                <h6 class="name white">Prayas</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/angel.jpeg" class="image"/>
+                <h6 class="name">Angel</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/samarpit.jpeg" class="image"/>
+                <h6 class="name white">Samarpit</h6>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="outer-container">
+                <img src="images/fullteam/aarushi.jpeg" class="image"/>
+                <h6 class="name">Aarushi</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/aarushi.jpeg" class="image"/>
+                <h6 class="name">Aarushi</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/aarushi.jpeg" class="image"/>
+                <h6 class="name">Aarushi</h6>
+            </div>
+
+            <div class="outer-container">
+                <img src="images/fullteam/aarushi.jpeg" class="image"/>
+                <h6 class="name">Aarushi</h6>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="js/script_fullteam.js"></script>
+
+<script>
+
+let dotNumberD = 1
+let previousDotNumber = 1
+
+setInterval(()=>{
+	// let dotNumber = dotNumberD
+	console.log("current dot is dot", dotNumberD)
+	let targetDot = document.getElementById(`dot`+ dotNumberD)
+	targetDot.style.bottom = "18px"
+	dotNumberD++
+	if(dotNumberD > 3){
+		dotNumberD = 1
+	}
+	
+},900)
+setTimeout(()=>{
+	setInterval(()=>{
+		let previousDot = document.getElementById(`dot`+ previousDotNumber)
+		previousDot.style.bottom = "0px"
+		previousDotNumber++
+		if(previousDotNumber > 3){
+			previousDotNumber = 1
+		}
+	},900)
+}, 900)
+
+
+</script>
+</body>
+</html>
