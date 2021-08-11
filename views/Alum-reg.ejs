@@ -72,39 +72,60 @@
                 <input required class="form-control" id="Designation" name="designation">
             </div>
         </div>
-        <label for="higher" class="h6 mb-0">Competetive Exams</label>
+        <label for="higher" class="h6 mb-0">Competetive Exams  <span style="font-weight: 400; color: black;"><i>(if applicable)</i></span></label>
         <div id="exams" class="row" >
             <div class="from-group col-6 ">
                 <label for="exam" class="col-form-label pt-1">Exams Cleared</label>
-                <input required class="form-control" name="exams">
+                <input class="form-control" name="exams" id="exam">
             </div>
     
             <div class="from-group col-6 ">
                 <label for="year" class="col-form-label pt-1">year</label>
-                <input required class="form-control" name="examyear">
+                <input class="form-control" name="examyear" id="year">
             </div>
         </div>
-        <label for="higher" class="h6 mb-0 mt-3">Higher Studies</label>
+        <label for="higher" class="h6 mb-0 mt-3">Higher Studies  <span style="font-weight: 400; color: black;"><i>(if applicable)</i></span></label>
         <div id="higher" class="row" >
             <div class="from-group col-4 ">
                 <label for="course" class="col-form-label pt-1">Course</label>
-                <input required class="form-control" id="course" name="highcourse">
+                <input class="form-control" id="course" name="highcourse">
             </div>
     
             <div class="from-group col-4 ">
                 <label for="institution" class="col-form-label pt-1">Institution</label>
-                <input required class="form-control" id="institution" name="institute">
+                <input class="form-control" id="institution" name="institute">
             </div>
     
             <div class="from-group col-4">
                 <label for="year" class="col-form-label pt-1">Year</label>
-                <input required class="form-control" id="year" name="year">
+                <input class="form-control" id="year" name="year">
             </div>
         </div>
 
         <div class="form-group">
-            <label for="linkedin">Your LinkedIn Profile</label>
-            <input required class="form-control" id="linkedin" name="linkedin" placeholder="Enter Your profile link">
+            <label for="linkedin" class="h6 mb-0 mt-3">Your LinkedIn Profile</label>
+            <input class="form-control mt-1" id="linkedin" name="linkedin" placeholder="Enter Your profile link">
+        </div>
+
+        <label for="buddies" class="h6 mb-1 mt-3">Mention Your Colleagues  <span style="font-weight: 400; color: black;"><i>(if applicable)</i></span></label>
+        <div id="buddies" class="row" >
+            <label for="colleague-one" class="col-form-label pt-1 pb-0" style="padding-left: 15px; font-weight: 600;">Friend One</label>
+            <div class="from-group col-12" id="colleague-one">
+                <label for="colleague-one-name" class="col-form-label pt-1">Name</label>
+                <input class="form-control" id="colleague-one-name" name="highcourse">
+
+                <label for="colleague-one-number" class="col-form-label pt-1">Contact Number</label>
+                <input class="form-control" id="colleague-one-number" name="highcourse">
+            </div>
+            <label for="colleague-two" class="col-form-label pt-1 pb-0" style="padding-left: 15px; font-weight: 600;">Friend Two</label>
+            <div class="from-group col-12" id="colleague-two">
+                <label for="colleague-two-name" class="col-form-label pt-1">Name</label>
+                <input class="form-control" id="colleague-two-name" name="highcourse">
+
+                <label for="colleague-two-number" class="col-form-label pt-1">Contact Number</label>
+                <input class="form-control" id="colleague-two-number" name="highcourse">
+            </div>
+    
         </div>
 
         <div class="form-group pt-4 col-6 mx-auto">

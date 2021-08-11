@@ -1185,4 +1185,12 @@ footer .footer-bottom .social-circle a {
     text-align: center;
   }
 }
+
+
+.upcoming {
+  color: #02ba21;
+}
+.passed {
+  color: #8f4757;
+}
 /*# sourceMappingURL=main.css.map */
