@@ -33,6 +33,11 @@
   src: url("../assets/fonts/nunito/NunitoSans-Black.ttf");
 }
 
+.display-in-center{
+  display: flex;
+  justify-content: center;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -419,7 +424,7 @@ nav .sub-menu a {
 .team-member-student::before {
   position: absolute;
   content: "";
-  width: 59%;
+  width: 85%;
   border-radius: 5px;
   height: 220%;
   background: rgba(62, 186, 243, 0.7);
