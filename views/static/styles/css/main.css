@@ -433,7 +433,7 @@ nav .sub-menu a {
   left: -100%;
   z-index: 1;
   /* transform: rotate(20.5deg); */
-  transform: rotate(39.5deg);
+  transform: rotate(32.5deg);
   transform-origin: center top 0;
   transition: 0.5s;
 }
@@ -498,7 +498,7 @@ nav .sub-menu a {
 
 .team-member:hover::before {
   /* left: 0; */
-  left: 52%;
+  left: 46%;
 }
 
 .team-member-picture:hover {
