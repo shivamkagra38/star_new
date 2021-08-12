@@ -6,44 +6,29 @@
   height: 250px;
   width: 250px;
 }
-.outer-container{
-  height: 350px;
-  width: 300px;
-  background-color: red;
-  border-radius: 25px;
-  position: relative;
-  margin: 15px;
-}
 .photoFrame {
   width: 100%;
 }
-
-.main-container {
-  margin: 20px 30px;
-  display: flex;
-  justify-content: space-around;
+.outer{
+  background-color: white;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
-
-.image{
-  height: 100%;
+.outer:hover{
+  transform: scale(1.15);
+}
+.img{
   width: 100%;
-  border-radius: 25px;
-}
-.name{
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  color: black;
-  font-size: 36px;
-  margin-bottom: 10px;
-  font-family: 'Anton', sans-serif;
-  font-weight: 500;
+  height: 100%;
+  border-radius: 50%;
 }
 
-.outer-container:hover {
-  transform: scale(1.05, 1.05);
+.main-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
 }
-
-.white{
-  color: white !important;
+body{
+  background-image: url("/../../images/fullteam/background3.png");
 }

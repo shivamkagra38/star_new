@@ -432,13 +432,15 @@ nav .sub-menu a {
   top: -50%;
   left: -100%;
   z-index: 1;
-  transform: rotate(20.5deg);
+  /* transform: rotate(20.5deg); */
+  transform: rotate(39.5deg);
   transform-origin: center top 0;
   transition: 0.5s;
 }
 
 .team-member-student:hover::before {
   left: 10%;
+  /* left: 45%; */
 }
 
 .team .card-text {
@@ -495,7 +497,8 @@ nav .sub-menu a {
 }
 
 .team-member:hover::before {
-  left: 0;
+  /* left: 0; */
+  left: 52%;
 }
 
 .team-member-picture:hover {
