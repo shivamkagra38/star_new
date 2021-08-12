@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const bodyParser = require("body-parser");
-const e = require("express");
+// const e = require("express");
 const { strict } = require("assert");
 const path = require("path");
 const { google } = require("googleapis");
@@ -68,6 +68,14 @@ async function registerData(arr) {
     },
   });
   register += 1;
+}
+
+const launchStatus = (req, res, next) => {
+  if(isLaunched){
+    next()
+  }else{
+    res.send("hello")
+  }
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
