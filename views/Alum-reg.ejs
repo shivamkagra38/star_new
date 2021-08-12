@@ -20,20 +20,18 @@
 <section>
     <form method="POST" target="/register" class="my-5" style="width: 500px; margin: auto;">
         <div class="form-group">
-            <label for="name">First Name</label>
+            <label for="name">Name</label>
             <input required class="form-control" id="name" name="firstname" placeholder="Enter Your Name">
         </div>
-        <div class="form-group">
-            <label for="lastname">Last Name</label>
-            <input required class="form-control" id="name" name="lastname" placeholder="Enter Your Last Name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input required class="form-control" id="email" type="email" name="email" placeholder="Enter Your Email">
-        </div>
-        <div class="form-group">
-            <label for="Contact">Contact</label>
-            <input required class="form-control" id="contact" name="contact" placeholder="Enter Your Contact Number">
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="email">Email</label>
+                <input required class="form-control" id="email" type="email" name="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group col-6">
+                <label for="Contact">Contact</label>
+                <input required class="form-control" id="contact" name="contact" placeholder="Enter Your Contact Number">
+            </div>
         </div>
         <div class="row">
             <div class="form-group col-6">
@@ -102,30 +100,39 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="linkedin" class="h6 mb-0 mt-3">Your LinkedIn Profile</label>
             <input class="form-control mt-1" id="linkedin" name="linkedin" placeholder="Enter Your profile link">
-        </div>
+        </div> -->
 
-        <label for="buddies" class="h6 mb-1 mt-3">Mention Your Colleagues  <span style="font-weight: 400; color: black;"><i>(if applicable)</i></span></label>
+        <label for="buddies" class="h6 mb-1 mt-3">Mention Your College batchmates <span style="font-weight: 400; color: black;"><i>(if applicable)</i></span></label>
         <div id="buddies" class="row" >
-            <label for="colleague-one" class="col-form-label pt-1 pb-0" style="padding-left: 15px; font-weight: 600;">Friend One</label>
-            <div class="from-group col-12" id="colleague-one">
-                <label for="colleague-one-name" class="col-form-label pt-1">Name</label>
-                <input class="form-control" id="colleague-one-name" name="highcourse">
+            <div class="col-6" >
+                <label for="colleague-one" class="col-form-label pt-1 pb-0" style="padding-left: 0; font-weight: 600;">Batchmate One</label>
+                <div class="from-group" id="colleague-one">
+                    <label for="colleague-one-name" class="col-form-label pt-1">Name</label>
+                    <input class="form-control" id="colleague-one-name" name="colleague-one-name">
 
-                <label for="colleague-one-number" class="col-form-label pt-1">Contact Number</label>
-                <input class="form-control" id="colleague-one-number" name="highcourse">
-            </div>
-            <label for="colleague-two" class="col-form-label pt-1 pb-0" style="padding-left: 15px; font-weight: 600;">Friend Two</label>
-            <div class="from-group col-12" id="colleague-two">
-                <label for="colleague-two-name" class="col-form-label pt-1">Name</label>
-                <input class="form-control" id="colleague-two-name" name="highcourse">
+                    <label for="colleague-one-number" class="col-form-label pt-1">Contact Number</label>
+                    <input class="form-control" id="colleague-one-number" name="colleague-one-number">
 
-                <label for="colleague-two-number" class="col-form-label pt-1">Contact Number</label>
-                <input class="form-control" id="colleague-two-number" name="highcourse">
+                    <label for="colleague-one-org" class="col-form-label pt-1">Current Organisation</label>
+                    <input class="form-control" id="colleague-one-org" name="colleague-one-org">
+                </div>
             </div>
-    
+            <div class="col-6" >
+                <label for="colleague-two" class="col-form-label pt-1 pb-0" style="padding-left: 0; font-weight: 600;">Batchmate Two</label>
+                <div class="from-group" id="colleague-two"> 
+                    <label for="colleague-two-name" class="col-form-label pt-1">Name</label>
+                    <input class="form-control" id="colleague-two-name" name="colleague-two-name">
+
+                    <label for="colleague-two-number" class="col-form-label pt-1">Contact Number</label>
+                    <input class="form-control" id="colleague-two-number" name="colleague-two-number">
+
+                    <label for="colleague-two-org" class="col-form-label pt-1">Current Organisation</label>
+                    <input class="form-control" id="colleague-two-org" name="colleague-two-org">
+                </div>
+            </div>
         </div>
 
         <div class="form-group pt-4 col-6 mx-auto">
