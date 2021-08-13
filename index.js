@@ -154,6 +154,10 @@ app.get("/mentorship", (req, res) => {
 app.get("/fullteam", (req, res)=>{
   res.render("FullTeam");
 })
+app.get('/activate', (req, res)=> {
+  isLaunched = true
+  res.redirect('/')
+})
 
 app.listen(process.env.PORT || 4500, function () {
   console.log("Server running at port 4500");
