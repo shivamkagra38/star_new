@@ -189,12 +189,13 @@ app.post('/test-registrations', async (req, res) => {
   batchmate_two_org: req.body.batchmate_two_org
  })
  try{
+   console.log("hello")
    const result = await newUser.save()
    console.log(result)
  }catch(e){
    console.log(e)
  }
- res.redirect('/')
+ res.redirect('www.google.com')
 })
 
 app.post("/test-messages", async (req, res) => {
