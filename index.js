@@ -209,7 +209,7 @@ app.post('/test-registrations', async (req, res) => {
  }catch(e){
    console.log(e)
  }
- res.redirect('www.google.com')
+ res.redirect('/')
 })
 
 app.post("/test-messages", async (req, res) => {
