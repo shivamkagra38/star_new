@@ -1,16 +1,16 @@
 const express = require("express");
 const app = express();
-
 const bodyParser = require("body-parser");
-// const e = require("express");
 const { strict } = require("assert");
+const mongoose = require('mongoose')
 const path = require("path");
 const { google } = require("googleapis");
-
+require('dotenv').config()
 app.set("view engine", "ejs");
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("views/static"));
+
+const {regUserModel} = require('./db/registerSchema')
 
 // go below for writing the data
 
@@ -69,6 +69,13 @@ async function registerData(arr) {
   });
   register += 1;
 }
+
+
+mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: true } ,(err)=>{
+  if(!err){
+    console.log("connected successfully")
+  }
+})
 
 let isLaunched = false
 let tokenCode = "saL7aJpLA1t1kvdjlVNRr6DlklPaRCRpceILOJGAHwtEbq6hadUMsAtG3xyeHdyJ9ozvgRSWavZzLhXwHYWj1T5lqLXe0Ebumw4xX72WAhcpKd8rXOjJCv5KQgKGmxvCvu0Ei6YOTHrGl7cnVIGcn0hbrsANKAc0gI3wYEhqf52xXEs26cT9V7W9d6f4iXXLTouKxQvCEQQW4lvrXh3Px1iEa2swDOERLzTwFIaliuYf9xlAn534zSvnS0"
@@ -157,6 +164,35 @@ app.get("/fullteam", (req, res)=>{
 app.get('/activate', (req, res)=> {
   isLaunched = true
   res.redirect('/')
+})
+
+app.get('/test-registrations', async (req, res) => {
+ const newUser = new regUserModel({
+  name: req.body.name,
+  email: req.body.email,
+  contact: req.body.cantact,
+  course: req.body.course,
+  branch: req.body.branch,
+  organisation: req.body.organisation,
+  current_city: req.body.current_city,
+  exams_cleared: req.body.exams_cleared,
+  year_cleared_year:  req.body.year_cleared_year,
+  higer_course:  req.body.higer_course,
+  higer_institution:  req.body.higer_institution,
+  higer_year:  req.body.higer_year,
+  batchmate_one_name:  req.body.batchmate_one_number,
+  batchmate_one_number: req.body.batchmate_one_number,
+  batchmate_one_org: req.body.batchmate_one_org,
+  batchmate_two_name: req.body.batchmate_two_name,
+  batchmate_two_number: req.body.batchmate_two_number,
+  batchmate_two_org: req.body.batchmate_two_org
+ })
+ try{
+   const result = await newUser.save()
+   console.log(result)
+ }catch(e){
+   console.log(e)
+ }
 })
 
 app.listen(process.env.PORT || 4500, function () {
