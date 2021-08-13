@@ -70,16 +70,22 @@ async function registerData(arr) {
   register += 1;
 }
 
+let isLaunched = false
+let tokenCode = "saL7aJpLA1t1kvdjlVNRr6DlklPaRCRpceILOJGAHwtEbq6hadUMsAtG3xyeHdyJ9ozvgRSWavZzLhXwHYWj1T5lqLXe0Ebumw4xX72WAhcpKd8rXOjJCv5KQgKGmxvCvu0Ei6YOTHrGl7cnVIGcn0hbrsANKAc0gI3wYEhqf52xXEs26cT9V7W9d6f4iXXLTouKxQvCEQQW4lvrXh3Px1iEa2swDOERLzTwFIaliuYf9xlAn534zSvnS0"
 const launchStatus = (req, res, next) => {
   if(isLaunched){
     next()
   }else{
-    res.send("hello")
+    if(req.query.token === tokenCode){
+      res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown_kapish.html")))
+    }else{
+      res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown.html")))
+    }
   }
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.get("/", function (req, res) {
+app.get("/", launchStatus, function (req, res) {
   res.render("index");
 });
 

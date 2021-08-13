@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/countdown/main_kapish.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@600&display=swap" rel="stylesheet">
+<style>
+body{
+	
+	background: rgb(235,39,39);
+	background: linear-gradient(90deg, rgba(235,39,39,1) 0%, rgba(26,49,65,1) 100%);
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	flex-direction: column;
+    font-family: sans-serif;
+    font-weight: 100;
+	height: 100vh;
+	
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    font-size: 40px;
+    /* margin: 40px 0px 20px; */
+	font-family: 'Press Start 2P', cursive;
+	margin: 0px 0 20px;
+	margin-left: 72px;
+}
+
+</style>
+</head>
+<body>
+
+
+	<video autoplay muted loop id="myVideo">
+		<source src="/countdown/achaBackground.mp4" type="video/mp4">
+	  </video>
+	<div class="imageLogo">
+		<img src="/countdown/STARlogo.png" class="imageLogo"/>
+	</div>
+<h1>LAUNCHING IN<span id="dot1">.</span><span id="dot2">.</span><span id="dot3">.</span></h1>
+
+<div class="countdown">
+
+	<div class="countdown-block">
+	  <span class="days time-elem">
+		<span class="top">00</span>
+		<span class="top-back">
+		  <span>00</span>
+		</span>
+		<span class="bottom">00</span>
+		<span class="bottom-back">
+		  <span>00</span>
+		</span>
+	  </span>
+	  <span class="title">Days</span>
+	</div>
+   
+
+	<div class="countdown-block">
+	  <span class="hours time-elem">
+		<span class="top">00</span>
+		<span class="top-back">
+		  <span>00</span>
+		</span>
+		<span class="bottom">00</span>
+		<span class="bottom-back">
+		  <span>00</span>
+		</span>
+	  </span>
+	  <span class="title">Hours</span>
+	</div>
+	
+
+	<div class="countdown-block">
+	  <span class="minutes time-elem">
+		<span class="top">00</span>
+		<span class="top-back">
+		  <span>00</span>
+		</span>
+		<span class="bottom">00</span>
+		<span class="bottom-back">
+		  <span>00</span>
+		</span>
+	  </span>
+	  <span class="title">Minutes</span>
+	</div>
+
+	<div class="countdown-block">
+	  <span class="seconds time-elem">
+		<span class="top">00</span>
+		<span class="top-back">
+		  <span>00</span>
+		</span>
+		<span class="bottom">00</span>
+		<span class="bottom-back">
+		  <span>00</span>
+		</span>
+	  </span>
+	  <span class="title">Seconds</span>
+	</div>
+</div> 
+<div id="launchButtonBox">
+	<Button type="submit" id="launchButton"><a id="link-redirect"style="text-decoration: none; width: 100%; height: 100%;" href="https://www.instagram.com/art.u.shiii">LAUNCH</a></Button>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="/countdown/script_kapish.js"></script>
+
+<script>
+
+let dotNumberD = 1
+let previousDotNumber = 1
+
+setInterval(()=>{
+	// let dotNumber = dotNumberD
+	console.log("current dot is dot", dotNumberD)
+	let targetDot = document.getElementById(`dot`+ dotNumberD)
+	targetDot.style.bottom = "18px"
+	dotNumberD++
+	if(dotNumberD > 3){
+		dotNumberD = 1
+	}
+	
+},900)
+setTimeout(()=>{
+	setInterval(()=>{
+		let previousDot = document.getElementById(`dot`+ previousDotNumber)
+		previousDot.style.bottom = "0px"
+		previousDotNumber++
+		if(previousDotNumber > 3){
+			previousDotNumber = 1
+		}
+	},900)
+}, 900)
+
+
+</script>
+</body>
+</html>
