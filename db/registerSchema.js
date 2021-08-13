@@ -28,6 +28,11 @@ const msgSchema = new mongoose.Schema({
     message: String,
 })
 
+
+const statusSchema = new mongoose.Schema({
+    isLaunched: Boolean
+})
+const statusModel = mongoose.model("status", statusSchema)
 const regUserModel = mongoose.model("registered-alumnis", regSchema)
 const msgModel = mongoose.model("messages", msgSchema)
-module.exports = {regUserModel: regUserModel, msgModel: msgModel}
+module.exports = {regUserModel: regUserModel, msgModel: msgModel, statusModel: statusModel}

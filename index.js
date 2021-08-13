@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("views/static"));
 
-const {regUserModel, msgModel} = require('./db/registerSchema')
+const {regUserModel, msgModel, statusModel} = require('./db/registerSchema')
 
 // go below for writing the data
 
@@ -71,16 +71,19 @@ async function registerData(arr) {
 }
 
 
+
 mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: true } ,(err)=>{
   if(!err){
     console.log("connected successfully")
   }
 })
 
-let isLaunched = false
+
+
 let tokenCode = "saL7aJpLA1t1kvdjlVNRr6DlklPaRCRpceILOJGAHwtEbq6hadUMsAtG3xyeHdyJ9ozvgRSWavZzLhXwHYWj1T5lqLXe0Ebumw4xX72WAhcpKd8rXOjJCv5KQgKGmxvCvu0Ei6YOTHrGl7cnVIGcn0hbrsANKAc0gI3wYEhqf52xXEs26cT9V7W9d6f4iXXLTouKxQvCEQQW4lvrXh3Px1iEa2swDOERLzTwFIaliuYf9xlAn534zSvnS0"
-const launchStatus = (req, res, next) => {
-  if(isLaunched){
+const launchStatus = async (req, res, next) => {
+  let isLaunchedDoc = await statusModel.findOne({_id: "61168126a18cd69abaa968e6"})
+  if(isLaunched.isLaunched){
     next()
   }else{
     if(req.query.token === tokenCode){
@@ -161,9 +164,12 @@ app.get("/mentorship", (req, res) => {
 app.get("/fullteam", (req, res)=>{
   res.render("FullTeam");
 })
-app.get('/activate', (req, res)=> {
-  isLaunched = true
-  res.redirect('/')
+app.get('/activate', async (req, res)=> {
+  await statusModel.findOneAndUpdate({_id: "61168126a18cd69abaa968e6"}, {isLaunched: true}, ()=>{
+    console.log("launching")
+    res.redirect("/")
+  })
+  
 })
 
 app.post('/test-registrations', async (req, res) => {
