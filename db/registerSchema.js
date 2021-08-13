@@ -8,8 +8,9 @@ const regSchema = new mongoose.Schema({
     branch: String,
     organisation: String,
     current_city: String,
+    designation: String,
     exams_cleared: {type: String, required: false},
-    year_cleared_year: {type: String, required: false},
+    year_cleared_exam: {type: String, required: false},
     higer_course: {type: String, required: false},
     higer_institution: {type: String, required: false},
     higer_year: {type: String, required: false},
@@ -21,6 +22,12 @@ const regSchema = new mongoose.Schema({
     batchmate_two_org: {type: String, require: false},
 })
 
-const regUserModel = mongoose.model("Registered", regSchema)
+const msgSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    message: String,
+})
 
-module.exports = {regUserModel: regUserModel}
+const regUserModel = mongoose.model("registered-alumnis", regSchema)
+const msgModel = mongoose.model("messages", msgSchema)
+module.exports = {regUserModel: regUserModel, msgModel: msgModel}

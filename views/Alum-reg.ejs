@@ -18,7 +18,7 @@
     </div>
 </section>
 <section>
-    <form method="POST" target="/register" class="my-5" style="width: 500px; margin: auto;">
+    <form method="POST" target="/test-registrations" class="my-5" style="width: 500px; margin: auto;">
         <div class="form-group">
             <label for="name">Name</label>
             <input required class="form-control" id="name" name="name" placeholder="Enter Your Name">
@@ -56,7 +56,7 @@
         <div class="form-group row">
             <label for="city" id="city" class="col-3 col-form-label">Current City</label>
             <div class="col-9 ml-0">
-                <input required type="text" name="city" class="form-control" id="city">
+                <input required type="text" name="current_city" class="form-control" id="city">
             </div>
         </div>
             
@@ -74,29 +74,29 @@
         <div id="exams" class="row" >
             <div class="from-group col-6 ">
                 <label for="exam" class="col-form-label pt-1">Exams Cleared</label>
-                <input class="form-control" name="exams" id="exam">
+                <input class="form-control" name="exams_cleared" id="exam">
             </div>
     
             <div class="from-group col-6 ">
                 <label for="year" class="col-form-label pt-1">year</label>
-                <input class="form-control" name="examyear" id="year">
+                <input class="form-control" name="year_cleared_exam" id="year">
             </div>
         </div>
         <label for="higher" class="h6 mb-0 mt-3">Higher Studies  <span style="font-weight: 400; color: black;"><i>(if applicable)</i></span></label>
         <div id="higher" class="row" >
             <div class="from-group col-4 ">
                 <label for="course" class="col-form-label pt-1">Course</label>
-                <input class="form-control" id="course" name="highcourse">
+                <input class="form-control" id="higher_course" name="highcourse">
             </div>
     
             <div class="from-group col-4 ">
                 <label for="institution" class="col-form-label pt-1">Institution</label>
-                <input class="form-control" id="institution" name="institute">
+                <input class="form-control" id="institution" name="higher_institute">
             </div>
     
             <div class="from-group col-4">
                 <label for="year" class="col-form-label pt-1">Year</label>
-                <input class="form-control" id="year" name="year">
+                <input class="form-control" id="year" name="higher_year">
             </div>
         </div>
 
@@ -111,26 +111,26 @@
                 <label for="colleague-one" class="col-form-label pt-1 pb-0" style="padding-left: 0; font-weight: 600;">Batchmate One</label>
                 <div class="from-group" id="colleague-one">
                     <label for="colleague-one-name" class="col-form-label pt-1">Name</label>
-                    <input class="form-control" id="colleague-one-name" name="colleague-one-name">
+                    <input class="form-control" id="colleague-one-name" name="batchmate_one_name">
 
                     <label for="colleague-one-number" class="col-form-label pt-1">Contact Number</label>
-                    <input class="form-control" id="colleague-one-number" name="colleague-one-number">
+                    <input class="form-control" id="colleague-one-number" name="batchmate_one_contact">
 
                     <label for="colleague-one-org" class="col-form-label pt-1">Current Organisation</label>
-                    <input class="form-control" id="colleague-one-org" name="colleague-one-org">
+                    <input class="form-control" id="colleague-one-org" name="batchmate_one_org">
                 </div>
             </div>
             <div class="col-6" >
                 <label for="colleague-two" class="col-form-label pt-1 pb-0" style="padding-left: 0; font-weight: 600;">Batchmate Two</label>
                 <div class="from-group" id="colleague-two"> 
                     <label for="colleague-two-name" class="col-form-label pt-1">Name</label>
-                    <input class="form-control" id="colleague-two-name" name="colleague-two-name">
+                    <input class="form-control" id="colleague-two-name" name="batchmate_two_name">
 
                     <label for="colleague-two-number" class="col-form-label pt-1">Contact Number</label>
-                    <input class="form-control" id="colleague-two-number" name="colleague-two-number">
+                    <input class="form-control" id="colleague-two-number" name="batchmate-two-number">
 
                     <label for="colleague-two-org" class="col-form-label pt-1">Current Organisation</label>
-                    <input class="form-control" id="colleague-two-org" name="colleague-two-org">
+                    <input class="form-control" id="colleague-two-org" name="batchmate_two_org">
                 </div>
             </div>
         </div>

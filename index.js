@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("views/static"));
 
-const {regUserModel} = require('./db/registerSchema')
+const {regUserModel, msgModel} = require('./db/registerSchema')
 
 // go below for writing the data
 
@@ -166,7 +166,7 @@ app.get('/activate', (req, res)=> {
   res.redirect('/')
 })
 
-app.get('/test-registrations', async (req, res) => {
+app.post('/test-registrations', async (req, res) => {
  const newUser = new regUserModel({
   name: req.body.name,
   email: req.body.email,
@@ -174,9 +174,10 @@ app.get('/test-registrations', async (req, res) => {
   course: req.body.course,
   branch: req.body.branch,
   organisation: req.body.organisation,
+  designation: req.body.designation,
   current_city: req.body.current_city,
   exams_cleared: req.body.exams_cleared,
-  year_cleared_year:  req.body.year_cleared_year,
+  year_cleared_exam:  req.body.year_cleared_year,
   higer_course:  req.body.higer_course,
   higer_institution:  req.body.higer_institution,
   higer_year:  req.body.higer_year,
@@ -193,6 +194,22 @@ app.get('/test-registrations', async (req, res) => {
  }catch(e){
    console.log(e)
  }
+ res.redirect('/')
+})
+
+app.post("/test-messages", async (req, res) => {
+  const newMsg = new msgModel({
+    name: req.body.name,
+    email: req.body.email,
+    message: req.body.message
+  })
+  try{
+    const result = await newMsg.save()
+    console.log(result)
+  }catch(e){
+    console.log(e)
+  }
+  res.redirect('/')
 })
 
 app.listen(process.env.PORT || 4500, function () {
