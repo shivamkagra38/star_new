@@ -82,15 +82,19 @@ mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: tr
 
 let tokenCode = "saL7aJpLA1t1kvdjlVNRr6DlklPaRCRpceILOJGAHwtEbq6hadUMsAtG3xyeHdyJ9ozvgRSWavZzLhXwHYWj1T5lqLXe0Ebumw4xX72WAhcpKd8rXOjJCv5KQgKGmxvCvu0Ei6YOTHrGl7cnVIGcn0hbrsANKAc0gI3wYEhqf52xXEs26cT9V7W9d6f4iXXLTouKxQvCEQQW4lvrXh3Px1iEa2swDOERLzTwFIaliuYf9xlAn534zSvnS0"
 const launchStatus = async (req, res, next) => {
-  let isLaunchedDoc = await statusModel.findOne({_id: "61168126a18cd69abaa968e6"})
-  if(isLaunched.isLaunched){
-    next()
-  }else{
-    if(req.query.token === tokenCode){
-      res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown_kapish.html")))
+  try{
+    let isLaunchedDoc = await statusModel.findOne({_id: "61168126a18cd69abaa968e6"})
+    if(isLaunchedDoc.isLaunched){
+      next()
     }else{
-      res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown.html")))
+      if(req.query.token === tokenCode){
+        res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown_kapish.html")))
+      }else{
+        res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown.html")))
+      }
     }
+  }catch(e){
+    console.log(e)
   }
 }
 
@@ -165,10 +169,14 @@ app.get("/fullteam", (req, res)=>{
   res.render("FullTeam");
 })
 app.get('/activate', async (req, res)=> {
-  await statusModel.findOneAndUpdate({_id: "61168126a18cd69abaa968e6"}, {isLaunched: true}, ()=>{
-    console.log("launching")
-    res.redirect("/")
-  })
+  try{
+    await statusModel.findOneAndUpdate({_id: "61168126a18cd69abaa968e6"}, {isLaunched: true}, ()=>{
+      console.log("launching")
+      res.redirect("/")
+    })
+  }catch(e){
+    console.log(e)
+  }
   
 })
 
