@@ -14,13 +14,17 @@ window.addEventListener('load', () => {
     let totalSeconds;
     
     function init() {
-        totalSeconds = Math.floor((new Date('08/13/2021 12:50:00') - new Date()) / 1000); 
+        totalSeconds = Math.floor((new Date('08/13/2021 13:10:00') - new Date()) / 1000); 
         setTimeLeft();
         let interval = setInterval(() => {
             if (totalSeconds <= 0) {
                 clearInterval(interval);
                 document.getElementById('launch-in').style.display="none"
                 document.getElementById('live-soon').style.display="block"
+                days.innerHTML = "00"
+                seconds.innerHTML = "00"
+                minutes.innerHTML = "00"
+                hours.innerHTML = "00"
             }
             countTime();
         }, 1000);
