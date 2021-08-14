@@ -75,6 +75,8 @@ async function registerData(arr) {
 mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: true } ,(err)=>{
   if(!err){
     console.log("connected successfully")
+  }else{
+    console.log(err)
   }
 })
 
