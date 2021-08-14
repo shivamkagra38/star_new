@@ -312,7 +312,7 @@ body {overflow: hidden;
 
   #launchButtonBox {
     width: 800px;
-    height: 400px;
+    /* height: 400px; */
     background-color: none;
     visibility: hidden;
     opacity: 0;
