@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
     let totalSeconds;
     
     function init() {
-        totalSeconds = Math.floor((new Date('08/14/2021 11:30:00') - new Date()) / 1000); 
+        totalSeconds = Math.floor((new Date('08/14/2021 11:55:00') - new Date()) / 1000); 
         setTimeLeft();
         let interval = setInterval(() => {
             if (totalSeconds <= 0) {
@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
                 let button = document.getElementById("launchButtonBox")
                 button.style.visibility = "visible"
                 button.style.opacity= "1"
+                document.getElementById("form").style.display = "block"
             }
             countTime();
         }, 1000);

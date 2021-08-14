@@ -96,8 +96,8 @@ body {overflow: hidden;
   position: absolute !important;
   z-index: -999;
   top: 0;
-  height: 100vh;
-  width: 100vw !important;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -128,6 +128,12 @@ body {overflow: hidden;
 	/* background-color: red; */
 	position: relative;
 	transition: "position 600ms";
+}
+
+
+#form{
+  display: none;
+  transition: display 1s;
 }
 
 
