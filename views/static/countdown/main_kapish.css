@@ -150,6 +150,7 @@ body {overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    transform: scale(0.95);
     /* -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -326,6 +327,7 @@ body {overflow: hidden;
     width: 50%;
     height: 20%;
     font-size: 48px;
+    margin-bottom: 25px;
     font-family: 'Georama', sans-serif;
     border-radius: 30px;
     box-shadow: 0px 12px 1px rgba(153, 135, 135, 0.562);
@@ -349,3 +351,5 @@ body {overflow: hidden;
     font-size: 48px;
     font-family: 'Georama', sans-serif;
   }
+
+
