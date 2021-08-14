@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "alum-records",
+  "private_key_id": "03452660402d69a7bcc2936403901c239e48a00f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpAPAltFHZQPui\nXTP2GmeuzxqsyTCOV+z57whQSDx350RHWtyW0hQhb9uKTDq2Bae1tEkrgOGA3C6X\nuWFWzi3vYo/R33mWJcuGZ/fIoXH7Ac3AKA4z2ZOYtC8Dmtxq84GEL4E2sP70K3gz\nbJHOPDpJGI4rW0zY8CAeuQgZ7pdJr1wbQZqY/8aXKtZ0DeDbs8MEg0ZuBhscjYYF\nqJTm4FDlEtfgVpKV2oWY1WUtcgT75KAtv46ouqRWwGH/j6inhy/rQs3N5PA1Rnf0\nMSim47Pwj4NydDLQZrS3bMxDhM/saLhrn2W+GFrceDyzVawoSU+A2lAWGKYcE/Ud\nM20OIk5vAgMBAAECggEAJ6eeMaKlX941DQxkgFcCxAw5XJiaiZPM+XoiT8AbXCEK\nLtn9j2/8pDncYA9x6TrbdrG2R3xmrTc8wYIQem9HbPeJ+ns+ysHUhxWHGO700SpD\nrlZXusfPL5H7xBNGq9u2JJ+G6J/QOtemTR6o+aS9ImCeH0M9fVuelcbhxT/sBLA8\nh/Z0y3a6zdAtPXJTRuA8tX2i97Nahib4p9URl5zLB9YitD8d+gYcJ9TjrSq2oeZK\nOUwt/6czM3frDvJbYveicoDbd4qmY+kqzczJX2gKlFUxCrkD59HcAuavH1PDVUCY\n/inGCtZ3N8Roj3HPYo/cJDAD0F7KYvwxHD+vC8+PsQKBgQDfNv4bWyx1qgYd2gyU\nhlyR7jkyqo2V1h/CqWpTnw9gLVY//I7eS16Tsf1sZInLLqzLPQHcYdmtHt5ctSW0\noxFODruuV1E/CxDRQ0f3iUpjCfQplibKgZaTswG5w6JR+Hu2VuZKoRDQV5W6wXYj\njOLA1kjk/8SxSuf0gsEn9HFI3wKBgQDB05MV3Obyl2h58idPOgnDCr8rY6yw1W69\nfsqwHA0gr5fcB+ASoZEcB5sGQpqIyOY5BD7RwIuQv7fCkaaagXN4Q0W5EJuZ0MKx\n+G2L6LGlmRt3KXSHBG06UULCbIZ+gIAJWgXj11eQzttTtVG/fQGTyN9hJGKcPyl0\nI6sgDy9ccQKBgQCEddLnkvxYOvR0RJBQl0dZxh+lRHbO4wln8DdLtklejqjvQcXa\nfql6RhaYezUWIPWjiemPyXVuebIFG+5rOpWrV6zicaiiG8P4GtAbQhqlmSOOhi8w\n3yPnNEQi48hwkl9/viPdR6V9rWwKLoIX6KQrQT5yvqEPgN8TR4CuYC3VywKBgBCx\nM92SJKGHwIuf+xqrmOOfLU+DSgAAoYTYQoRgJhFGjgF4/CcemuybCxLC8aQOCSWn\n4/EUb/CLUjwDZyGvPE6DHKIPeBcLD3lcN7Lw2zuzr9XXUB3Al9eJ4AH2bq6+SkiD\n5DX2+aeS6PiQiPXAwj4D8pjfFU73cY568+XS6PVBAoGAM6nTReIm/FGlzwi2imb/\nGelAxslvDffqNYb+C6RPUfjyEzevGpOQ2Irfiv1+PZlp7ePisE3p2CEmbuGzyOwL\nTym1JrFQLnVJzG1jBGGNE3ZRIPNpfNLxBIgTMoYmJMPt7qMnYEb1dEKtMGWue4BR\nj92o+nfl4gtlSiJG1WNC9nM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "home-889@alum-records.iam.gserviceaccount.com",
+  "client_id": "103410484157087791224",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/home-889%40alum-records.iam.gserviceaccount.com"
+}
