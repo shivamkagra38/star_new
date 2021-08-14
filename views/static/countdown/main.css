@@ -96,12 +96,19 @@ body {overflow: hidden;
   position: absolute !important;
   z-index: -999;
   top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.imageLogo {
+.imageLogoBox {
 	
-	width: 450px;
-	height: 450px;
+	width: 23.43%;
+	height: 46.53%;
+}
+.imageLogo{
+  height: 100%;
+  width: 100%;
 }
 
 #dot1{
