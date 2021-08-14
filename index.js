@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const { strict } = require("assert");
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const path = require("path");
 const { google } = require("googleapis");
 require('dotenv').config()
@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("views/static"));
 
-const {regUserModel, msgModel, statusModel} = require('./db/registerSchema')
+// const {regUserModel, msgModel, statusModel} = require('./db/registerSchema')
 
 // go below for writing the data
 
@@ -72,21 +72,30 @@ async function registerData(arr) {
 
 
 
-mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: true } ,(err)=>{
-  if(!err){
-    console.log("connected successfully")
-  }else{
-    console.log(err)
-  }
-})
+// mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true } ,(err)=>{
+//   if(!err){
+//     console.log("connected successfully")
+//   }else{
+//     console.log(err)
+//   }
+// })
 
 
-
+let launchStatusCode = false
 let tokenCode = "saL7aJpLA1t1kvdjlVNRr6DlklPaRCRpceILOJGAHwtEbq6hadUMsAtG3xyeHdyJ9ozvgRSWavZzLhXwHYWj1T5lqLXe0Ebumw4xX72WAhcpKd8rXOjJCv5KQgKGmxvCvu0Ei6YOTHrGl7cnVIGcn0hbrsANKAc0gI3wYEhqf52xXEs26cT9V7W9d6f4iXXLTouKxQvCEQQW4lvrXh3Px1iEa2swDOERLzTwFIaliuYf9xlAn534zSvnS0"
 const launchStatus = async (req, res, next) => {
   try{
-    let isLaunchedDoc = await statusModel.findOne({_id: "61168126a18cd69abaa968e6"})
-    if(isLaunchedDoc.isLaunched){
+    // let isLaunchedDoc = await statusModel.findOne({_id: "61168126a18cd69abaa968e6"})
+    // if(isLaunchedDoc.isLaunched){
+    //   next()
+    // }else{
+    //   if(req.query.token === tokenCode){
+    //     res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown_kapish.html")))
+    //   }else{
+    //     res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown.html")))
+    //   }
+    // }
+    if(launchStatusCode){
       next()
     }else{
       if(req.query.token === tokenCode){
@@ -95,6 +104,7 @@ const launchStatus = async (req, res, next) => {
         res.sendFile((path.join(__dirname + "/views/static/countdown/Countdown.html")))
       }
     }
+
   }catch(e){
     console.log(e)
   }
@@ -171,63 +181,56 @@ app.get("/fullteam", (req, res)=>{
   res.render("FullTeam");
 })
 app.get('/activate', async (req, res)=> {
-  try{
-    await statusModel.findOneAndUpdate({_id: "61168126a18cd69abaa968e6"}, {isLaunched: true}, ()=>{
-      console.log("launching")
-      res.redirect("/")
-    })
-  }catch(e){
-    console.log(e)
-  }
-  
+ launchStatusCode = true;
+ res.render('/')
 })
 
-app.post('/test-registrations', async (req, res) => {
- const newUser = new regUserModel({
-  name: req.body.name,
-  email: req.body.email,
-  contact: req.body.cantact,
-  course: req.body.course,
-  branch: req.body.branch,
-  organisation: req.body.organisation,
-  designation: req.body.designation,
-  current_city: req.body.current_city,
-  exams_cleared: req.body.exams_cleared,
-  year_cleared_exam:  req.body.year_cleared_exam,
-  higher_course:  req.body.higher_course,
-  higher_institution:  req.body.higher_institution,
-  higher_year:  req.body.higher_year,
-  batchmate_one_name:  req.body.batchmate_one_number,
-  batchmate_one_number: req.body.batchmate_one_number,
-  batchmate_one_org: req.body.batchmate_one_org,
-  batchmate_two_name: req.body.batchmate_two_name,
-  batchmate_two_number: req.body.batchmate_two_number,
-  batchmate_two_org: req.body.batchmate_two_org
- })
- try{
-   console.log("hello")
-   const result = await newUser.save()
-   console.log(result)
- }catch(e){
-   console.log(e)
- }
- res.redirect('/')
-})
+// app.post('/test-registrations', async (req, res) => {
+//  const newUser = new regUserModel({
+//   name: req.body.name,
+//   email: req.body.email,
+//   contact: req.body.cantact,
+//   course: req.body.course,
+//   branch: req.body.branch,
+//   organisation: req.body.organisation,
+//   designation: req.body.designation,
+//   current_city: req.body.current_city,
+//   exams_cleared: req.body.exams_cleared,
+//   year_cleared_exam:  req.body.year_cleared_exam,
+//   higher_course:  req.body.higher_course,
+//   higher_institution:  req.body.higher_institution,
+//   higher_year:  req.body.higher_year,
+//   batchmate_one_name:  req.body.batchmate_one_number,
+//   batchmate_one_number: req.body.batchmate_one_number,
+//   batchmate_one_org: req.body.batchmate_one_org,
+//   batchmate_two_name: req.body.batchmate_two_name,
+//   batchmate_two_number: req.body.batchmate_two_number,
+//   batchmate_two_org: req.body.batchmate_two_org
+//  })
+//  try{
+//    console.log("hello")
+//    const result = await newUser.save()
+//    console.log(result)
+//  }catch(e){
+//    console.log(e)
+//  }
+//  res.redirect('/')
+// })
 
-app.post("/test-messages", async (req, res) => {
-  const newMsg = new msgModel({
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message
-  })
-  try{
-    const result = await newMsg.save()
-    console.log(result)
-  }catch(e){
-    console.log(e)
-  }
-  res.redirect('/')
-})
+// app.post("/test-messages", async (req, res) => {
+//   const newMsg = new msgModel({
+//     name: req.body.name,
+//     email: req.body.email,
+//     message: req.body.message
+//   })
+//   try{
+//     const result = await newMsg.save()
+//     console.log(result)
+//   }catch(e){
+//     console.log(e)
+//   }
+//   res.redirect('/')
+// })
 
 app.listen(process.env.PORT || 4500, function () {
   console.log("Server running at port 4500");
