@@ -101,10 +101,14 @@ body {overflow: hidden;
   object-fit: cover;
 }
 
-.imageLogo {
+.imageLogoBox {
 	
-	width: 450px;
-	height: 450px;
+	width: 23.43%;
+	height: 46.53%;
+}
+.imageLogo{
+  height: 100%;
+  width: 100%;
 }
 
 #dot1{
@@ -130,7 +134,7 @@ body {overflow: hidden;
   
   h1 {
     font-size: 1.5em;
-    margin: 19px 0 50px;
+    margin: 19px 0 40px;
     letter-spacing: 8px;
     color: #fff;
     text-transform: uppercase;
@@ -145,7 +149,7 @@ body {overflow: hidden;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
              */
-    margin-top: 25px;
+    /* margin-top: 25px; */
   }
   
   .title {
@@ -327,6 +331,7 @@ body {overflow: hidden;
   #launchButton:hover {
     background-color: black;
     color: red;
+    cursor: pointer;
   }
   a:hover:link{
     color: red !important;
