@@ -282,7 +282,7 @@ nav .sub-menu a {
 .get-involved-card .separator:hover {
   transform: scale(1.1);
   transition: transform 0.2s;
-  background-color: #2f92bb;
+  background-color: #dc3545;
   color: white;
 }
 
@@ -1190,9 +1190,19 @@ footer .footer-bottom .social-circle a {
   }
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar-brand{
+    font-size: 12px;
+  }
+  .fa, .fas {
+    font-weight: 900;
+    font-size: 15px;
+}
+}
 
 .upcoming {
-  color: #02ba21;
+  color: #8f4757;
 }
 .passed {
   color: #8f4757;
