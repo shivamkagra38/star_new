@@ -113,6 +113,11 @@ app.get("/contact", launchStatus, (req, res) => {
   res.render("contact");
 });
 
+app.get("/form", launchStatus, function (req, res) {
+  res.render("form");
+});
+
+
 app.post("/message", async (req, res) => {
   let userData = [
     req.body.name,

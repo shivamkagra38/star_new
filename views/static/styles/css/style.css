@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
+
+body {
+  /* background: url('https://i.ibb.co/zQynDBT/Desert-Highway-at-Death-Valley-National-Park-California-USA.jpg'); */
+  /* background: url('https://i.ibb.co/k3TKn5D/pexels-paula-1731040.jpg'); */
+  background-size:cover;
+  background-repeat:no-repeat;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#safarnamaform{
+  padding: 50px ;
+  max-width: 800px;
+  margin: 30px auto;
+  /* background:white; */
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  box-shadow:0px 2px 25px rgba(0,0,0,0.3);
+  border-radius:20px;
+  transition:transform 0.2s ease-in-out;
+}
+
+
+input, textarea{
+  width: 100%;
+  margin: 7px 0px 7px 0px;
+  display: inline-block;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 1em;
+  /* font-family:inherit; */
+  font-family:'Noto Sans';
+  background:white;
+}
+
+.branch label, .Interact label{
+  margin: 0 0 0 10px;
+}
+
+p{
+  text-align:justify;
+  margin: 10px 0 1px 2px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+input:focus,textarea:focus{
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: rgb(214, 214, 214);
+}
+.branch, .Interact{
+  text-align: left;
+  margin: 10px 0 0 0;
+}
+
+input[type="radio"]
+{
+  width:auto;
+  padding: 0 0 0 10px; 
+}
+
+.btn-submit {
+  width: 200px;
+  margin: 0 auto 4vw auto;
+  padding:10px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+  background: #810000;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.btn-submit:hover {
+  color: white;
+  background: rgb(220,0,32);
+}
+
+.btn-submit:active {
+  position: relative;
+  top:4px;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+/* h4{
+  text-align:center;
+  font-size: 20px;
+  margin-top:0;
+} */
+
+/* h1{
+  font-weight:400;
+  padding-top:0;
+  margin-top:0;
+  font-family: 'Roboto Slab', serif;
+} */

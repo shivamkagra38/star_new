@@ -1,0 +1,43 @@
+<%- include("partials/header"); -%>
+<div class="shadow">
+    <img class ="pagehead" src="images/headers/Safarnama.jpg" alt="">
+  </div>
+<!-- <h1>SAFARNAMA</h1> -->
+<section id="safarnamaform">
+  <!-- <h4><b>Personal information</b></h4> -->
+
+    <p>Name</p>
+    <input type="text" value="" placeholder="Name" required/>
+
+    <p>E-mail Id</p>
+    <input type="email" value="" placeholder="E-mail" />
+
+    <p>There's something wrong with our contact list, it doesn't have your number.</p>
+    <input type="text" value="" placeholder="Contact no.">
+
+    <p>BRANCH</p>
+    <div class="branch">
+    <input type="radio" name="Branch"/><label for="Branch">Computer Science</label><br>
+    <input type="radio" name="Branch"/><label for="Branch">Information Technology</label><br>
+    <input type="radio" name="Branch"/><label for="Branch">Electronics And Communication</label><br>
+    <input type="radio" name="Branch"/><label for="Branch">Electrical And Electronics Engineering</label><br>
+    <input type="radio" name="Branch"/><label for="Branch">Mechanical</label><br>
+    <input type="radio" name="Branch"/><label for="Branch">BioTechnology</label><br>
+    </div>
+
+    <p>Expectations from the session</p>
+    <textarea rows="4" cols="50" placeholder="Expectations"></textarea>
+
+    <p>Questions for the speaker</p>
+    <textarea rows="4" cols="50" placeholder="Questions"></textarea>
+    
+    <p>Do you want to interact with the speaker ?</p>
+    <div class="Interact">
+    <input type="radio" name="Interact"/><label for="Interact">Yes</label><br>
+    <input type="radio" name="Interact"/><label for="Interact">No</label><br>
+    </div>
+</section>
+<div class="button btn-submit" id="submit">Agree and Submit</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="index.js"></script>
+<%- include("partials/footer"); -%>
