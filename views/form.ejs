@@ -2,28 +2,57 @@
 <div class="shadow">
     <img class ="pagehead" src="images/headers/Safarnama.jpg" alt="">
   </div>
-<!-- <h1>SAFARNAMA</h1> -->
+<!-- <h1>Session 1-Registration Form</h1> -->
 <section id="safarnamaform">
   <form method="post" autocomplete="off" name="google-sheet" id="safarnama">
-  <!-- <h4><b>Personal information</b></h4> -->
 
-    <p>Name</p>
-    <input type="text" value="" placeholder="Name" name="Name" required/>
+<!-- Description -->
+
+  <h4><b>Session 1-Registration Form</b></h4>
+  
+  <div id="Speaker">
+    <p class="qdesc">Speaker</p>
+    <p class="name subdesc">:&nbsp;Star Gang</p>
+  </div>
+  
+  <p class="qdesc">About the Speaker</p>
+  <p class="subdesc">ln this virtual event, we'll talk about success stories of work at home people. We'll discuss how did they get
+    started, what are the needed tools, how much information or knowledge required to start, and many more</p>
+  
+  <p class="qdesc">About the Session</p>
+  <p class="subdesc">ln this virtual event, we'll talk about success stories of work at home people. We'll discuss how did they get
+    started, what are the needed tools, how much information or knowledge required to start, and many more</p>
+  
+  <p class="qdesc">Joining Details</p>
+  <p class="subqdesc">Date: 27th November,2021<br>Time: 10am-12pm<br>Link: <a href="https://meet.google.com/mmb-wcpa-rzh" target="_blank" class="Link">https://meet.google.com/mmb-wcpa-rzh</a></p>
+
+  
+  <div id="WhatsApp">
+    <p id="desc">WhatsApp Group: <a href="https://chat.whatsapp.com/Dt0MiJjtxLaEVnJbDAOu3x" target="_blank"class="Link">https://chat.whatsapp.com/Dt0MiJjtxLaEVnJbDAOu3x</a></p>
+  </div>
+
+<!-- /Description -->
+
+
+<!-- Form -->
+
+  <p>Name</p>
+    <input type="text" placeholder="Name" name="Name" required/>
 
     <p>E-mail Id</p>
-    <input type="email" value="" placeholder="E-mail" name="Email" required/>
+    <input type="email" placeholder="E-mail" name="Email" required/>
 
-    <p>There's something wrong with our contact list, it doesn't have your number.</p>
-    <input type="text" value="" placeholder="Contact no." name="Contact" required />
+    <p>WhatsApp Contact Number</p>
+    <input type="tel" pattern="[0-9]{10}" placeholder="Contact no." name="Contact" required />
 
     <p>BRANCH</p>
     <div class="branch">
-    <input type="radio" name="Branch" value="CSE"/><label for="Branch">Computer Science</label><br>
-    <input type="radio" name="Branch" value="I.T"/><label for="Branch">Information Technology</label><br>
-    <input type="radio" name="Branch" value="ECE"/><label for="Branch">Electronics And Communication</label><br>
-    <input type="radio" name="Branch" value="EEE"/><label for="Branch">Electrical And Electronics Engineering</label><br>
-    <input type="radio" name="Branch" value="Mech"/><label for="Branch">Mechanical</label><br>
-    <input type="radio" name="Branch" value="BioTech"/><label for="Branch">BioTechnology</label><br>
+    <input type="radio" name="Branch" value="CSE" required/><label for="Branch">Computer Science</label><br>
+    <input type="radio" name="Branch" value="I.T" required/><label for="Branch">Information Technology</label><br>
+    <input type="radio" name="Branch" value="ECE" required/><label for="Branch">Electronics And Communication</label><br>
+    <input type="radio" name="Branch" value="EEE" required/><label for="Branch">Electrical And Electronics Engineering</label><br>
+    <input type="radio" name="Branch" value="Mech" required/><label for="Branch">Mechanical</label><br>
+    <input type="radio" name="Branch" value="BioTech" required/><label for="Branch">BioTechnology</label><br>
     </div>
 
     <p>Expectations from the session</p>
@@ -34,22 +63,30 @@
     
     <p>Do you want to interact with the speaker ?</p>
     <div class="Interact">
-    <input type="radio" name="Interact" value="Yes"/><label for="Interact">Yes</label><br>
-    <input type="radio" name="Interact" value="No"/><label for="Interact">No</label><br>
+    <input type="radio" name="Interact" value="Yes" required/><label for="Interact">Yes</label><br>
+    <input type="radio" name="Interact" value="No" required/><label for="Interact">No</label><br>
     </div>
     </form>
-    <h5 id="tcs">Click The Button Below To Complete Registration !</h5>
+    <h5 id="tcs"></h5>
+
+<!-- /Form -->
 </section>
 <input type="submit" class="button btn-submit" id="submit" form="safarnama"></input>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="index.js"></script>
+
+
 <script>
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxBGIVVpNHxoNeRRoqpwhX4-R_bQfbev9R0K8TIrYhRtSgnLus/exec'
   const form = document.forms['google-sheet']
 
   form.addEventListener('submit', e => {
-      document.getElementById("tcs").innerHTML="Wait";
+    document.getElementById("tcs").innerHTML="Wait...";
+    document.getElementById("tcs").style.fontSize="17px";
+    document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
+    document.getElementById("tcs").style.margin="auto";
+    document.getElementById("tcs").style.padding="25px 0 0 0";
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => document.getElementById("tcs").innerHTML="Form Submitted Successfully", document.getElementById("tcs").style.color="green")
