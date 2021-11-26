@@ -181,8 +181,8 @@ app.put('/setActivation', (req, res)=>{
   res.send(launchStatusCode)
 })
 
-app.listen(process.env.PORT || 4500, function () {
-  console.log("Server running at port 4500");
+app.listen(process.env.PORT || 8080, function () {
+  console.log("Server running at port 8080");
 });
 
 
