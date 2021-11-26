@@ -4,40 +4,56 @@
   </div>
 <!-- <h1>SAFARNAMA</h1> -->
 <section id="safarnamaform">
+  <form method="post" autocomplete="off" name="google-sheet" id="safarnama">
   <!-- <h4><b>Personal information</b></h4> -->
 
     <p>Name</p>
-    <input type="text" value="" placeholder="Name" required/>
+    <input type="text" value="" placeholder="Name" name="Name" required/>
 
     <p>E-mail Id</p>
-    <input type="email" value="" placeholder="E-mail" />
+    <input type="email" value="" placeholder="E-mail" name="Email" required/>
 
     <p>There's something wrong with our contact list, it doesn't have your number.</p>
-    <input type="text" value="" placeholder="Contact no.">
+    <input type="text" value="" placeholder="Contact no." name="Contact" required />
 
     <p>BRANCH</p>
     <div class="branch">
-    <input type="radio" name="Branch"/><label for="Branch">Computer Science</label><br>
-    <input type="radio" name="Branch"/><label for="Branch">Information Technology</label><br>
-    <input type="radio" name="Branch"/><label for="Branch">Electronics And Communication</label><br>
-    <input type="radio" name="Branch"/><label for="Branch">Electrical And Electronics Engineering</label><br>
-    <input type="radio" name="Branch"/><label for="Branch">Mechanical</label><br>
-    <input type="radio" name="Branch"/><label for="Branch">BioTechnology</label><br>
+    <input type="radio" name="Branch" value="CSE"/><label for="Branch">Computer Science</label><br>
+    <input type="radio" name="Branch" value="I.T"/><label for="Branch">Information Technology</label><br>
+    <input type="radio" name="Branch" value="ECE"/><label for="Branch">Electronics And Communication</label><br>
+    <input type="radio" name="Branch" value="EEE"/><label for="Branch">Electrical And Electronics Engineering</label><br>
+    <input type="radio" name="Branch" value="Mech"/><label for="Branch">Mechanical</label><br>
+    <input type="radio" name="Branch" value="BioTech"/><label for="Branch">BioTechnology</label><br>
     </div>
 
     <p>Expectations from the session</p>
-    <textarea rows="4" cols="50" placeholder="Expectations"></textarea>
+    <textarea rows="4" cols="50" placeholder="Expectations" name="Expectations"></textarea>
 
     <p>Questions for the speaker</p>
-    <textarea rows="4" cols="50" placeholder="Questions"></textarea>
+    <textarea rows="4" cols="50" placeholder="Questions" name="Speaker"></textarea>
     
     <p>Do you want to interact with the speaker ?</p>
     <div class="Interact">
-    <input type="radio" name="Interact"/><label for="Interact">Yes</label><br>
-    <input type="radio" name="Interact"/><label for="Interact">No</label><br>
+    <input type="radio" name="Interact" value="Yes"/><label for="Interact">Yes</label><br>
+    <input type="radio" name="Interact" value="No"/><label for="Interact">No</label><br>
     </div>
+    </form>
+    <h5 id="tcs">Click The Button Below To Complete Registration !</h5>
 </section>
-<div class="button btn-submit" id="submit">Agree and Submit</div>
+<input type="submit" class="button btn-submit" id="submit" form="safarnama"></input>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="index.js"></script>
+<script>
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxBGIVVpNHxoNeRRoqpwhX4-R_bQfbev9R0K8TIrYhRtSgnLus/exec'
+  const form = document.forms['google-sheet']
+
+  form.addEventListener('submit', e => {
+      document.getElementById("tcs").innerHTML="Wait";
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => document.getElementById("tcs").innerHTML="Form Submitted Successfully", document.getElementById("tcs").style.color="green")
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 <%- include("partials/footer"); -%>
