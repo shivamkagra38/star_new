@@ -113,7 +113,7 @@ app.get("/contact", launchStatus, (req, res) => {
   res.render("contact");
 });
 
-app.get("/form", launchStatus, function (req, res) {
+app.get("/safarnama", launchStatus, function (req, res) {
   res.render("form");
 });
 
