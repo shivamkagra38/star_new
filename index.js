@@ -117,6 +117,9 @@ app.get("/contact", launchStatus, (req, res) => {
 //   res.render("form");
 // });
 
+app.get("/smp", launchStatus, function (req, res) {
+  res.render("smpForm");
+});
 
 app.post("/message", async (req, res) => {
   let userData = [
