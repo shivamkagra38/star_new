@@ -117,12 +117,12 @@ a:hover {
   margin-top: 40px;
 }
 
-.content-text > .red-btn {
+/* .content-text > .red-btn {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 .top-header {
   background: #d1cdcd;
   display: block;
