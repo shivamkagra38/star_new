@@ -102,5 +102,32 @@
   form.addEventListener('submit', e => {
   e.preventDefault();
   })
+
+  // form.addEventListener('submit', e => {
+  //   if(i==0)
+  //   {
+  //     document.getElementById("tcs").textContent="Wait...";
+  //     document.getElementById("tcs").style.fontSize="17px";
+  //     document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
+  //     document.getElementById("tcs").style.margin="auto";
+  //     document.getElementById("tcs").style.padding="25px 0 0 0";
+  //     e.preventDefault()
+  //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  //       .then(response => document.getElementById("tcs").textContent="Form Submitted Successfully !", document.getElementById("tcs").style.color="green")
+  //       .catch(error => console.error('Error!', error.message))
+  //     i++;
+  //   }
+  //   else
+  //   {
+  //     document.getElementById("tcs").textContent="Form has already been Submitted !";
+  //     document.getElementById("tcs").style.fontSize="17px";
+  //     document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
+  //     document.getElementById("tcs").style.margin="auto";
+  //     document.getElementById("tcs").style.padding="25px 0 0 0";
+  //     document.getElementById("tcs").style.color="red";
+  //     e.preventDefault();
+  //   }
+  // })
+
 </script>
 <%- include("partials/footer"); -%>
