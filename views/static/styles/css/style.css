@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap");
 
 body {
   /* background: url('https://i.ibb.co/zQynDBT/Desert-Highway-at-Death-Valley-National-Park-California-USA.jpg'); */
   /* background: url('https://i.ibb.co/k3TKn5D/pexels-paula-1731040.jpg'); */
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -15,26 +15,28 @@ body {
   user-select: none;
 }
 
-#safarnamaform{
-  padding: 50px ;
+#safarnamaform {
+  padding: 50px;
   max-width: 800px;
   margin: 30px auto;
   /* background:white; */
-  background:rgba(255,255,255,0.8);
-  backdrop-filter:blur(10px);
-  box-shadow:0px 2px 25px rgba(0,0,0,0.3);
-  border-radius:20px;
-  transition:transform 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  transition: transform 0.2s ease-in-out;
+  word-wrap: break-word;
 }
 
-h4{
-  text-align:center;
+h4 {
+  text-align: center;
   font-size: 32px;
   border-bottom: 7px solid #810000;
-  margin-top:0;
+  margin-top: 0;
 }
 
-input, textarea{
+input,
+textarea {
   width: 100%;
   margin: 7px 0px 7px 0px;
   display: inline-block;
@@ -44,124 +46,113 @@ input, textarea{
   border: 1px solid lightgrey;
   font-size: 1em;
   /* font-family:inherit; */
-  font-family:'Noto Sans';
-  background:white;
+  font-family: "Noto Sans";
+  background: white;
 }
 
-.branch label, .year label, .Interact label{
+.branch label,
+.year label,
+.Interact label {
   margin: 0 0 0 10px;
 }
 
-p{
-  text-align:justify;
+p {
+  text-align: justify;
   margin: 10px 0 1px 2px;
   text-decoration: none;
   font-weight: 600;
 }
 
-input:focus,textarea:focus{
+input:focus,
+textarea:focus {
   border-radius: 20px;
   border: 1px solid black;
   background-color: rgb(214, 214, 214);
 }
-.branch,.year,.Interact{
+.branch,
+.year,
+.Interact {
   text-align: left;
   margin: 10px 0 0 0;
 }
 
-input[type="radio"]
-{
-  width:auto;
-  padding: 0 0 0 10px; 
+input[type="radio"] {
+  width: auto;
+  padding: 0 0 0 10px;
 }
 
 .btn-submit {
   width: 200px;
   margin: 0 auto 4vw auto;
-  padding:10px 22px;
+  padding: 10px 22px;
   font-size: 16px;
   font-weight: 600;
   opacity: 1;
-  background: #810000;
+  /* background: #810000; */
+  background: gray;
   color: white;
   cursor: pointer;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .btn-submit:hover {
   color: white;
-  background: rgb(220,0,32);
+  background: gray;
+  /* background: rgb(220,0,32); */
 }
 
 .btn-submit:active {
   position: relative;
-  top:4px;
-  box-shadow: none;
+  /* top: 4px; */
+  /* box-shadow: none; */
 }
 
-.qdesc{
-  padding:20px 0 0px 0;
+.qdesc {
+  padding: 20px 0 0px 0;
   font-size: 18px;
 }
 
-.subdesc{
+.subdesc {
   font-size: 14px;
 }
 
-#desc{
+#desc {
   font-size: 18px;
-  padding:25px 0 35px 0;
+  padding: 25px 0 35px 0;
 }
 
-#Speaker{
+#Speaker {
   display: flex;
 }
 
-#WhatsApp{
+#WhatsApp {
   border-bottom: 3px solid #810000;
   margin-bottom: 25px;
 }
 
-.name{
+.name {
   padding: 20px 0 0 0;
   font-size: 17px;
 }
 
-.Link{
+.Link {
   font-size: 15px;
   /* padding: 20px 0 0 0; */
 }
 
-.Link:hover{
+.Link:hover {
   color: #810000;
 }
 
-span{
+span {
   /* padding:0 0 0 9px; */
-  font-weight:500;
+  font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* h1{
   font-weight:400;
@@ -169,3 +160,191 @@ span{
   margin-top:0;
   font-family: 'Roboto Slab', serif;
 } */
+
+@media only screen and (max-width: 950px) {
+  #safarnamaform {
+    max-width: 740px;
+  }
+  /* h4 {
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 7px solid #810000;
+    margin-top: 0;
+  } */
+
+  input,
+  textarea {
+    font-size: 1.5em;
+  }
+
+  .btn-submit {
+    font-size: 20px;
+  }
+
+  .qdesc {
+    font-size: 24px;
+  }
+
+  .subdesc {
+    font-size: 20px;
+  }
+
+  #desc {
+    font-size: 20px;
+  }
+  .name {
+    font-size: 22px;
+  }
+
+  .Link {
+    font-size: 17px;
+  }
+
+  .branch,
+  .year,
+  .Interact {
+    font-size: 23px;
+  }
+  p {
+    font-size: 24px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #safarnamaform {
+    max-width: 330px !important;
+  }
+  h4 {
+    font-size: 20px !important;
+  }
+
+  input,
+  textarea {
+    font-size: 1em !important;
+  }
+
+  .btn-submit {
+    font-size: 15px !important;
+  }
+
+  .qdesc {
+    font-size: 18px !important;
+  }
+
+  .subdesc {
+    font-size: 14px !important;
+  }
+
+  #desc {
+    font-size: 16px !important;
+  }
+  .name {
+    font-size: 18px !important;
+  }
+
+  .Link {
+    font-size: 14px !important;
+  }
+
+  .branch,
+  .year,
+  .Interact {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #safarnamaform {
+    max-width: 450px !important;
+  }
+  h4 {
+    font-size: 20px !important;
+  }
+
+  input,
+  textarea {
+    font-size: 1em !important;
+  }
+
+  .btn-submit {
+    font-size: 15px !important;
+  }
+
+  .qdesc {
+    font-size: 18px !important;
+  }
+
+  .subdesc {
+    font-size: 14px !important;
+  }
+
+  #desc {
+    font-size: 16px !important;
+  }
+  .name {
+    font-size: 18px !important;
+  }
+
+  .Link {
+    font-size: 14px !important;
+  }
+
+  .branch,
+  .year,
+  .Interact {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #safarnamaform {
+    max-width: 330px !important;
+  }
+  h4 {
+    font-size: 20px !important;
+  }
+
+  input,
+  textarea {
+    font-size: 1em !important;
+  }
+
+  .btn-submit {
+    font-size: 15px !important;
+  }
+
+  .qdesc {
+    font-size: 18px !important;
+  }
+
+  .subdesc {
+    font-size: 14px !important;
+  }
+
+  #desc {
+    font-size: 16px !important;
+  }
+  .name {
+    font-size: 18px !important;
+  }
+
+  .Link {
+    font-size: 14px !important;
+  }
+
+  .branch,
+  .year,
+  .Interact {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 18px !important;
+  }
+}

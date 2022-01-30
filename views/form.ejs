@@ -1,6 +1,6 @@
-<%- include("partials/header"); -%>
+<%- include("partials/header(res)"); -%>
 <div class="shadow">
-    <img class ="pagehead" src="images/headers/Safarnama.jpg" alt="">
+    <img class ="pagehead" src="images/headers/Safarnama-Poster.jpg" alt="">
   </div>
 <!-- <h1>Session 1-Registration Form</h1> -->
 <section id="safarnamaform">
@@ -8,21 +8,25 @@
 
 <!-- Description -->
 
-  <h4><b>Session 2-Registration Form</b></h4>
+  <h4><b>Session X-Registration Form</b></h4>
   
   <div id="Speaker">
     <p class="qdesc">Speaker</p>
-    <p class="name subdesc">:&nbsp;Ms. Pareksha Manchanda</p>
+    <p class="name subdesc">:&nbsp;Alumni</p>
+    <!-- Ms. Pareksha Manchanda -->
   </div>
   
   <p class="qdesc">About the Speaker</p>
-  <p class="subdesc">&#8211; Graduated from UIET(CSE'21)<br>&#8211; Currently a Software Engineer at Google <br>&#8211; Software Developer Intern- Amazon<br>&#8211; Joined Goldman Sachs as a Software Developer Intern</p>
+  <p class="subdesc"></p>
+  <!-- &#8211; Graduated from UIET(CSE'21)<br>&#8211; Currently a Software Engineer at Google <br>&#8211; Software Developer Intern- Amazon<br>&#8211; Joined Goldman Sachs as a Software Developer Intern -->
   
   <p class="qdesc">About the Session</p>
-  <p class="subdesc">Coding enVISION to get you all a glimpse of her software journey.</p>
+  <p class="subdesc"></p>
+  <!-- Coding enVISION to get you all a glimpse of her software journey. -->
   
   <p class="qdesc">Event Details</p>
-  <p class="subqdesc">Date/Day: <span>19-12-2021, Sunday</span><br>Time: <span>12:00 P.M.</span></p>
+  <p class="subdesc">Date/Day: <span></span><br>Time: <span></span></p>
+  <!-- <span>19-12-2021, Sunday</span><br>Time: <span>12:00 P.M.</span> -->
   <!-- <br>Link: <a href="https://zoom.us/j/95360289506?pwd=OTdWUlAxVXB0M0hTbEp2UU0zZ2xWUT09" target="_blank" class="Link">https://zoom.us/j/95360289506?pwd=OTdWUlAxVXB0M0hTbEp2UU0zZ2xWUT09</a> -->
 
   
@@ -96,29 +100,7 @@
   const form = document.forms['google-sheet']
 
   form.addEventListener('submit', e => {
-    if(i==0)
-    {
-      document.getElementById("tcs").textContent="Wait...";
-      document.getElementById("tcs").style.fontSize="17px";
-      document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
-      document.getElementById("tcs").style.margin="auto";
-      document.getElementById("tcs").style.padding="25px 0 0 0";
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => document.getElementById("tcs").textContent="Form Submitted Successfully !", document.getElementById("tcs").style.color="green")
-        .catch(error => console.error('Error!', error.message))
-      i++;
-    }
-    else
-    {
-      document.getElementById("tcs").textContent="Form has already been Submitted !";
-      document.getElementById("tcs").style.fontSize="17px";
-      document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
-      document.getElementById("tcs").style.margin="auto";
-      document.getElementById("tcs").style.padding="25px 0 0 0";
-      document.getElementById("tcs").style.color="red";
-      e.preventDefault();
-    }
+  e.preventDefault();
   })
 </script>
 <%- include("partials/footer"); -%>

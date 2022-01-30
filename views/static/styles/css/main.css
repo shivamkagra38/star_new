@@ -33,8 +33,7 @@
   src: url("../assets/fonts/nunito/NunitoSans-Black.ttf");
 }
 
-
-.display-in-center{
+.display-in-center {
   display: flex;
   justify-content: center;
 }
@@ -83,6 +82,11 @@ a:hover {
   margin-right: 6rem;
 }
 
+.mx-4 {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
 .my-7 {
   margin-top: 7rem;
   margin-bottom: 7rem;
@@ -110,8 +114,15 @@ a:hover {
 .red-btn {
   background: #810000;
   color: white;
+  margin-top: 40px;
 }
 
+.content-text > .red-btn {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .top-header {
   background: #d1cdcd;
   display: block;
@@ -161,6 +172,10 @@ nav .navbar-brand {
   color: white;
 }
 
+.navbar {
+  padding: 0.2rem 0.8rem !important;
+}
+
 nav .nav-item:focus .sub-menu,
 nav .nav-item:focus-within .sub-menu,
 nav .nav-item:hover .sub-menu {
@@ -187,7 +202,7 @@ nav .sub-menu {
   transform: translateY(-2em);
   z-index: -1;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
- z-index 0s linear 0.01s;
+    z-index 0s linear 0.01s;
 }
 
 nav .sub-menu a {
@@ -233,7 +248,8 @@ nav .sub-menu a {
   transition: all 0.25s ease;
 }
 
-#upcoming-events .carousel-indicators-numbers li.active, #upcoming-events .carousel-indicators-numbers li:hover {
+#upcoming-events .carousel-indicators-numbers li.active,
+#upcoming-events .carousel-indicators-numbers li:hover {
   width: 30px;
   height: 30px;
   background-color: #000000;
@@ -265,6 +281,7 @@ nav .sub-menu a {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  object-fit: cover;
 }
 
 .get-involved-card .card-inner .card-back {
@@ -324,6 +341,7 @@ nav .sub-menu a {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  object-fit: cover;
 }
 
 .whatwedo .card-inner .card-back {
@@ -374,7 +392,8 @@ nav .sub-menu a {
   width: 250px;
   height: 160px;
   object-fit: cover;
-  -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
+  -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right
+        bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
 }
 
 @keyframes animate {
@@ -403,7 +422,8 @@ nav .sub-menu a {
 .team-member-picture {
   border-radius: 5px;
   background-size: contain;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.589);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 6px 20px 0 rgba(0, 0, 0, 0.589);
 }
 
 .team-member .name {
@@ -418,7 +438,8 @@ nav .sub-menu a {
   line-height: 21px;
 }
 
-.team-member .name:hover, .team-member .title:hover {
+.team-member .name:hover,
+.team-member .title:hover {
   color: inherit;
 }
 
@@ -536,6 +557,7 @@ nav .sub-menu a {
 
 .content-text {
   animation-delay: 0.4s;
+  font-weight: bold;
 }
 
 .ending-text {
@@ -949,6 +971,10 @@ iframe {
 .a-meet .season-section .season-no {
   font-size: 24;
   color: #810000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
 }
 
 .a-meet .season-section .card .card-img {
@@ -961,6 +987,7 @@ iframe {
   display: block;
   width: 100%;
   height: 286px;
+  object-fit: cover;
 }
 
 .a-meet .season-section .card-back {
@@ -1093,7 +1120,14 @@ footer .footer-bottom .social-network a.icoLinkedin:hover {
 
 footer .footer-bottom .social-network a.icoInstagram:hover {
   background: #f09433;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
@@ -1190,17 +1224,183 @@ footer .footer-bottom .social-circle a {
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .navbar-brand{
-    font-size: 12px;
+@media only screen and (max-width: 950px) {
+  .card-direct {
+    display: flex;
+    flex-direction: column;
   }
-  .fa, .fas {
-    font-weight: 900;
-    font-size: 15px;
-}
+  .correction {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .colr-4 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: max-content;
+  }
+  .mx-4 {
+    margin-left: -2rem !important;
+    margin-right: -2rem !important;
+  }
+  .mx-5 {
+    margin-left: 2rem !important ;
+    margin-right: 2rem !important;
+  }
+
+  .a-meet .season-section .card .card-img {
+    height: 700px;
+  }
+
+  .a-meet .season-section .card-front {
+    height: 700px;
+  }
+
+  .a-meet .season-section .card-back {
+    height: 700px;
+  }
+
+  .a-meet .season-section .card-text {
+    font-size: 35px;
+  }
+  .a-meet .season-section .season-no {
+    font-size: 40px;
+  }
+  .largetext-font {
+    font-size: 36px;
+  }
+  .btn {
+    font-size: 2rem;
+    padding: 0.375rem 1.5rem;
+  }
+  .size {
+    font-size: 30px;
+  }
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 12px;
+  }
+  .fa,
+  .fas {
+    font-weight: 900;
+    font-size: 15px;
+  }
+
+  .card-direct {
+    display: flex;
+    flex-direction: column;
+    /* width: fit-content; */
+  }
+  .correction {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .colr-4 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: max-content;
+  }
+  .mx-4 {
+    margin-left: -2rem !important;
+    margin-right: -2rem !important;
+  }
+  .mx-5 {
+    margin-left: 2rem !important ;
+    margin-right: 2rem !important;
+  }
+
+  .a-meet .season-section .card .card-img {
+    height: 286px !important;
+  }
+
+  .a-meet .season-section .card-front {
+    height: 286px !important;
+  }
+
+  .a-meet .season-section .card-back {
+    height: 286px !important;
+  }
+  .a-meet .season-section .card-text {
+    font-size: 16px;
+  }
+  .a-meet .season-section .season-no {
+    font-size: 24px;
+  }
+  .largetext-font {
+    font-size: 20px;
+  }
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+  }
+  .size {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .a-meet .season-section .card .card-img {
+    height: 500px !important;
+  }
+
+  .a-meet .season-section .card-front {
+    height: 500px !important;
+  }
+
+  .a-meet .season-section .card-back {
+    height: 500px !important;
+  }
+  .a-meet .season-section .card-text {
+    font-size: 20px;
+  }
+  .a-meet .season-section .season-no {
+    font-size: 40px !important;
+  }
+  .largetext-font {
+    font-size: 30px;
+  }
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1.5rem !important;
+  }
+  .size {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .a-meet .season-section .card .card-img {
+    height: 286px !important;
+  }
+
+  .a-meet .season-section .card-front {
+    height: 286px !important;
+  }
+
+  .a-meet .season-section .card-back {
+    height: 286px !important;
+  }
+  .a-meet .season-section .card-text {
+    font-size: 16px;
+  }
+  .a-meet .season-section .season-no {
+    font-size: 24px !important;
+  }
+  .largetext-font {
+    font-size: 20px;
+  }
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem !important;
+  }
+  .size {
+    font-size: 1rem;
+  }
+}
 .upcoming {
   color: #8f4757;
 }

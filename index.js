@@ -113,9 +113,9 @@ app.get("/contact", launchStatus, (req, res) => {
   res.render("contact");
 });
 
-// app.get("/safarnama", launchStatus, function (req, res) {
-//   res.render("form");
-// });
+app.get("/safarnama-form", launchStatus, function (req, res) {
+  res.render("form");
+});
 
 
 app.post("/message", async (req, res) => {
@@ -165,6 +165,10 @@ app.get("/va-meet", launchStatus, (req, res) => {
 
 app.get("/mentorship", launchStatus, (req, res) => {
   res.render("mentorship-program");
+});
+
+app.get("/safarnama", launchStatus, (req, res) => {
+  res.render("safarnama");
 });
 
 app.get("/fullteam", launchStatus, (req, res)=>{
