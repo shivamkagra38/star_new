@@ -89,7 +89,7 @@
 
 <!-- /Form -->
 </section>
-<input type="submit" class="button btn-submit" id="submit" form="safarnama"></input>
+<input type="submit" class="button btn-submit" id="submit" form="safarnama" disabled></input>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="index.js"></script>
 
@@ -98,10 +98,6 @@
   var i=0;
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxBGIVVpNHxoNeRRoqpwhX4-R_bQfbev9R0K8TIrYhRtSgnLus/exec'
   const form = document.forms['google-sheet']
-
-  form.addEventListener('submit', e => {
-  e.preventDefault();
-  })
 
   // form.addEventListener('submit', e => {
   //   if(i==0)
