@@ -1,86 +1,87 @@
 <%- include("partials/header"); -%>
-<!-- <div class="shadow">
+  <!-- <div class="shadow">
     <img class ="pagehead" src="images/headers/Safarnama.jpg" alt="">
   </div> -->
-<h1>Student Mentorship Program</h1>
-<section id="safarnamaform">
-  <form method="post" autocomplete="off" name="google-sheet" id="safarnama">
+  <h1>Student Mentorship Program</h1>
+  <section id="safarnamaform">
+    <form method="post" autocomplete="off" name="google-sheet" id="safarnama">
 
-<!-- Description -->
+      <!-- Description -->
 
-  <h4><b>SMP Registration Form</b></h4>
+      <h4><b>SMP Registration Form</b></h4>
 
-<!-- /Description -->
+      <!-- /Description -->
 
 
-<!-- Form -->
-  <p>Name</p>
-  <input type="text" placeholder="Name" name="Name" required/>
-  <p>Roll No.</p>
-  <input type="text" placeholder="RollNo" name="RollNo" required/>
-  <p>BRANCH</p>
-    <div class="branch">
-    <input type="radio" name="Branch" value="CSE" required/><label for="Branch">Computer Science</label><br>
-    <input type="radio" name="Branch" value="I.T" required/><label for="Branch">Information Technology</label><br>
-    <input type="radio" name="Branch" value="ECE" required/><label for="Branch">Electronics And Communication</label><br>
-    <input type="radio" name="Branch" value="EEE" required/><label for="Branch">Electrical And Electronics Engineering</label><br>
-    <input type="radio" name="Branch" value="Mech" required/><label for="Branch">Mechanical</label><br>
-    <input type="radio" name="Branch" value="BioTech" required/><label for="Branch">BioTechnology</label><br>
-    </div>
-    <p>Semester</p>
-    <input type="number" placeholder="Semester" name="Semester" required/>
-    <p>WhatsApp Contact Number</p>
-    <input type="tel" pattern="[0-9]{10}" placeholder="Contact no." name="Contact" required />
-    
-    <p>E-mail Id</p>
-    <input type="email" placeholder="E-mail" name="Email" required/>
+      <!-- Form -->
+      <p>Name</p>
+      <input type="text" placeholder="Name" name="Name" required />
+      <p>Roll No.</p>
+      <input type="text" placeholder="RollNo" name="RollNo" required />
+      <p>BRANCH</p>
+      <div class="branch">
+        <input type="radio" name="Branch" value="CSE" required /><label for="Branch">Computer Science</label><br>
+        <input type="radio" name="Branch" value="I.T" required /><label for="Branch">Information Technology</label><br>
+        <input type="radio" name="Branch" value="ECE" required /><label for="Branch">Electronics And
+          Communication</label><br>
+        <input type="radio" name="Branch" value="EEE" required /><label for="Branch">Electrical And Electronics
+          Engineering</label><br>
+        <input type="radio" name="Branch" value="Mech" required /><label for="Branch">Mechanical</label><br>
+        <input type="radio" name="Branch" value="BioTech" required /><label for="Branch">BioTechnology</label><br>
+      </div>
+      <p>Semester</p>
+      <input type="number" placeholder="Semester" name="Semester" required />
+      <p>WhatsApp Contact Number</p>
+      <input type="tel" pattern="[0-9]{10}" placeholder="Contact no." name="Contact" required />
 
-    <p>Rationale behind joining this program</p>
-    <textarea rows="4" cols="50" placeholder="Rationale" name="Rationale"></textarea>
-    
-    <p>Do you possess any prior experience with 3D printing or a 
+      <p>E-mail Id</p>
+      <input type="email" placeholder="E-mail" name="Email" required />
+
+      <p>Rationale behind joining this program</p>
+      <textarea rows="4" cols="50" placeholder="Rationale" name="Rationale"></textarea>
+
+      <p>Do you possess any prior experience with 3D printing or a
         formentioned software?<br>(not a prerequisite)</p>
-    <div class="Interact">
-    <input type="radio" value="Yes" name="Group" required/><label for="Interact">Yes</label><br>
-    <input type="radio" value="No" name="Group" required/><label for="Interact">No</label><br>
-    </div>
+      <div class="Interact">
+        <input type="radio" value="Yes" name="Experience" required /><label for="Interact">Yes</label><br>
+        <input type="radio" value="No" name="Experience" required /><label for="Interact">No</label><br>
+      </div>
     </form>
     <h5 id="tcs"></h5>
 
-<!-- /Form -->
-</section>
-<input type="submit" class="button btn-submit" id="submit" form="safarnama"></input>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="index.js"></script>
+    <!-- /Form -->
+  </section>
+  <input type="submit" class="button btn-submit" id="submit" form="safarnama"></input>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- <script src="index.js"></script> -->
 
-<script>
-  var i=0;
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzP7OyXxbhNre06Tz8tscPhggMNPxvBPKzMKidNn8zOvc5lpBuYU9R_wQCB0siBs055/exec'
-  const form = document.forms['google-sheet']
-  form.addEventListener('submit', e => {
-    if(i==0)
-    {
-      document.getElementById("tcs").textContent="Wait...";
-      document.getElementById("tcs").style.fontSize="17px";
-      document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
-      document.getElementById("tcs").style.margin="auto";
-      document.getElementById("tcs").style.padding="25px 0 0 0";
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => document.getElementById("tcs").textContent="Form Submitted Successfully !", document.getElementById("tcs").style.color="green")
-        .catch(error => console.error('Error!', error.message))
-      i++;
-    }
-    else
-    {
-      document.getElementById("tcs").textContent="Form has already been Submitted !";
-      document.getElementById("tcs").style.fontSize="17px";
-      document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
-      document.getElementById("tcs").style.margin="auto";
-      document.getElementById("tcs").style.padding="25px 0 0 0";
-      document.getElementById("tcs").style.color="red";
-      e.preventDefault();
-    }
-  })
-</script>
-<%- include("partials/footer"); -%>
+  <script>
+    var i = 0;
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyGZUjkq-KA9yrn5-Bmj948s6b69qh3FQ42ycPFzGZFfcRPHsXYwE_YrDE2WXgw2Egm/exec'
+    console.log(scriptURL);
+    const form = document.forms['google-sheet']
+    form.addEventListener('submit', e => {
+      if (i == 0) {
+        document.getElementById("tcs").textContent = "Wait...";
+        document.getElementById("tcs").style.fontSize = "17px";
+        document.getElementById("tcs").style.fontFamily = "'Roboto Slab', serif";
+        document.getElementById("tcs").style.margin = "auto";
+        document.getElementById("tcs").style.padding = "25px 0 0 0";
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => document.getElementById("tcs").textContent = "Form Submitted Successfully !", document.getElementById("tcs").style.color = "green")
+          .catch(error => console.error('Error!', error.message))
+        i++;
+      }
+      else {
+        document.getElementById("tcs").textContent = "Form has already been Submitted !";
+        document.getElementById("tcs").style.fontSize = "17px";
+        document.getElementById("tcs").style.fontFamily = "'Roboto Slab', serif";
+        document.getElementById("tcs").style.margin = "auto";
+        document.getElementById("tcs").style.padding = "25px 0 0 0";
+        document.getElementById("tcs").style.color = "red";
+        e.preventDefault();
+      }
+    })
+  </script>
+  <%- include("partials/footer"); -%>
