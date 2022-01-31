@@ -14,7 +14,21 @@
 
 
 <!-- Form -->
-
+  <p>Name</p>
+  <input type="text" placeholder="Name" name="Name" required/>
+  <p>Roll No.</p>
+  <input type="text" placeholder="RollNo" name="RollNo" required/>
+  <p>BRANCH</p>
+    <div class="branch">
+    <input type="radio" name="Branch" value="CSE" required/><label for="Branch">Computer Science</label><br>
+    <input type="radio" name="Branch" value="I.T" required/><label for="Branch">Information Technology</label><br>
+    <input type="radio" name="Branch" value="ECE" required/><label for="Branch">Electronics And Communication</label><br>
+    <input type="radio" name="Branch" value="EEE" required/><label for="Branch">Electrical And Electronics Engineering</label><br>
+    <input type="radio" name="Branch" value="Mech" required/><label for="Branch">Mechanical</label><br>
+    <input type="radio" name="Branch" value="BioTech" required/><label for="Branch">BioTechnology</label><br>
+    </div>
+    <p>Semester</p>
+    <input type="number" placeholder="Semester" name="Semester" required/>
     <p>WhatsApp Contact Number</p>
     <input type="tel" pattern="[0-9]{10}" placeholder="Contact no." name="Contact" required />
     
