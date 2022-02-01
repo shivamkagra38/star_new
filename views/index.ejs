@@ -1,4 +1,28 @@
 <%- include("partials/headerp"); -%>
+
+<!-- SMP Modal Box -->
+<div class="SMPoverlay" id="SMPoverlay" onclick="popupToggle();"></div>
+    <div class="SMPmodal" id="SMPmodal">
+        <button class="SMPclose-modal-btn" id="SMPclosebtn" onclick="popupToggle();">&times;</button>
+        <h1 class="SMPmodal-title">Student Mentorship Program</h1>
+        <img class="SMPmodal-image" src="images/home/smp-modal-img.png">
+        <p class="SMPmodal-content">It is a novel initiative undertaken by STAR, UIET, with the aim to enable positive and constructive interaction through the guidance provided by our Alumni to the Students.</p>
+        <a href="https://www.google.com/">
+            <button class="SMPmodal-CTA-btn">
+                Register
+            </button>
+        </a>
+    </div>
+    <script>
+      function popupToggle(){
+          const popup = document.getElementById('SMPmodal');
+          const backdrop = document.getElementById('SMPoverlay');
+          popup.classList.toggle('activePopup');
+          backdrop.classList.toggle('activeBG');
+      }
+      popupToggle();
+  </script>
+
 <!--    MAIN CAROUSEL   -->
 
    
