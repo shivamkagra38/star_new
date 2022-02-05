@@ -28,14 +28,14 @@
         <input type="radio" name="Branch" value="BioTech" required /><label for="Branch">BioTechnology</label><br>
       </div>
       <p>Semester</p>
-      <input type="number" placeholder="Semester" name="Semester" required />
+      <input type="number" min="4" max="8" placeholder="Semester" name="Semester" required />
       <p>WhatsApp Contact Number</p>
       <input type="tel" pattern="[0-9]{10}" placeholder="Contact no." name="Contact" required />
 
       <p>E-mail Id</p>
       <input type="email" placeholder="E-mail" name="Email" required />
 
-      <p>Rationale behind joining this program</p>
+      <p>Rationale behind joining this programme</p>
       <textarea rows="4" cols="50" placeholder="Rationale" name="Rationale"></textarea>
 
       <p>Do you possess any prior experience with 3D printing or a
@@ -57,7 +57,7 @@
   <script>
     var i = 0;
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyGZUjkq-KA9yrn5-Bmj948s6b69qh3FQ42ycPFzGZFfcRPHsXYwE_YrDE2WXgw2Egm/exec'
-    console.log(scriptURL);
+    // console.log(scriptURL);
     const form = document.forms['google-sheet']
     form.addEventListener('submit', e => {
       if (i == 0) {
