@@ -1738,8 +1738,8 @@ footer .footer-bottom .social-circle a {
   padding: 0;
   float: right;
   position: relative;
-  right: 0.8rem;
-  top: 0.5rem;
+  right: 0rem;
+  top: -0.7rem;
   color: rgb(145, 142, 142);
   z-index: 10;
 }
@@ -1795,10 +1795,10 @@ cursor: pointer;
     font-size: 2rem;
   }
   
-  .SMPclose-modal-btn{
+  /* .SMPclose-modal-btn{
     position: relative;
     top: -0.3rem;
-  }
+  } */
   
   .SMPmodal-image{
     width: 12rem;
@@ -1827,10 +1827,10 @@ cursor: pointer;
   font-size: 2rem;
 }
 
-.SMPclose-modal-btn{
+/* .SMPclose-modal-btn{
   position: relative;
   top: -0.3rem;
-}
+} */
 
 .SMPmodal-image{
   width: 12rem;
@@ -1849,22 +1849,22 @@ cursor: pointer;
 }
 }
 
-@media screen and (max-width: 914px) and (min-width: 425px){
+@media screen and (max-width: 914px) and (min-width: 600px){
   #SMPmodal{
     padding-bottom: 1rem;
     width: 70%;
     position: fixed;
-    left: 14%;
+    left: 15%;
   }
   
   .SMPmodal-title{
     font-size: 2rem;
   }
   
-  .SMPclose-modal-btn{
+  /* .SMPclose-modal-btn{
     position: relative;
     top: -0.3rem;
-  }
+  } */
   
   .SMPmodal-image{
     width: 12rem;
@@ -1883,11 +1883,11 @@ cursor: pointer;
   }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 600px){
   #SMPmodal{
     width: 80%;
     position: fixed;
-    left: 7%;
+    left: 10%;
   }
 
   #SMPmodal.activePopup{
@@ -1907,6 +1907,15 @@ cursor: pointer;
   .SMPmodal-content{
     position: relative;
     top: 0rem;
+  }
+
+  .SMPclose-modal-btn{
+    position: relative;
+    right: 0rem;
+    top: 0rem;
+    margin-top: -0.8rem;
+    padding-top: 0rem;
+    font-size: 1.5rem;
   }
 
   .SMPmodal-CTA-btn{
