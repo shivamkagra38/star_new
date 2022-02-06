@@ -1,25 +1,27 @@
 {
-  "name": "star_website",
+  "name": "new-folder",
   "version": "1.0.0",
-  "description": "UIET Alumni Cell Website",
+  "description": "This is the official website of our college's Alumni Affair Cell.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "scss": "node-sass --watch scss -o css"
-  },
-  "author": "Prerna",
-  "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
-    "body-parser": "^1.19.0",
-    "bootstrap": "^5.0.0-alpha1",
-    "bootstrap-icons": "^1.0.0",
-    "dotenv": "^10.0.0",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "googleapis": "^60.0.1",
-    "mongoose": "^5.13.7",
-    "node-sass": "^4.14.1"
-  }
+    "assert": "^2.0.0",
+    "body-parser": "^1.19.1",
+    "dotenv": "^15.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "googleapis": "^94.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivamkagra38/dsf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivamkagra38/dsf/issues"
+  },
+  "homepage": "https://github.com/shivamkagra38/dsf#readme"
 }

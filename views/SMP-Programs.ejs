@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONT AWESOME -->
     <script
       src="https://kit.fontawesome.com/ec67052a9d.js"
@@ -20,6 +18,7 @@
     />
     <link rel="stylesheet" href="/styles/css/main.css" />
     <link rel="stylesheet" href="/styles/css/style.css" />
+    <link rel="stylesheet" href="/styles/css/programs.css" />
     
     <!-- FAVICON -->
 
@@ -97,9 +96,8 @@
 
     <!--        NAVBAR     -->
     <nav class="navbar navbar-expand-lg fixed-top py-2">
-      <div class="container" id="navu">
+      <!-- <div class="container" id="navu">  -->
         <a href="/" class="navbar-brand">STUDENT TEAM FOR ALUMNI RELATIONS</a>
-
         <button
           id="custombutton"
           class="navbar-toggler"
@@ -132,8 +130,8 @@
                     >Student Mentorship <br />
                     Program</a
                   >
-                <li><a href="/safarnama">Safarnama</a></li>
                 </li>
+                <li><a href="/safarnama">Safarnama</a></li>
               </ul>
             </li>
             <li class="nav-item menu">
@@ -151,8 +149,73 @@
           </ul>
         </div>
       </div>
+    <!-- </div> -->
     </nav>
   </head>
   <body>
-    <div style="min-height: 100vh">
- 
+    
+
+<section class="shadow">
+  <img class ="pagehead" src="images/headers/SMP.png" alt="" />
+</section>
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+
+    <div class="col">
+      <h2 class="headings">Current Programs</h2>
+    </div>
+
+  </div>
+</div>
+<section class="light">
+	<div class="container py-2">
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="images/programs/3d-m.svg" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue">Introduction To 3D Printing</h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Instructor : Mr. Yash Gopal Mittal
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+  <!--
+          <b>About the instructor-</b>
+          <br>
+          Graduated from UIET with honors in mechanical engineering.
+          <br>
+          Joined IIT Bombay, as a direct-to-PhD research scholar.
+          <br>
+          Was awarded the prestigious Prime Minister Research Fellowship (PMRF).-->
+
+         <ul style="list-style-type:disc;">
+       <li>
+        Graduated from UIET with honors in mechanical engineering.
+       </li>
+       <li>
+        Joined IIT Bombay, as a direct-to-PhD research scholar.
+       </li>
+     <li>
+     Was awarded the prestigious Prime Minister Research Fellowship (PMRF)
+     </li>
+     
+      <a href="/SMP-Registration"> <button class="but mt-3" style="background-color: maroon; color:whitesmoke;">Register Here!</button></a>
+    
+    </ul>
+        </div>
+
+			</div>
+     
+     
+   
+		</article>
+    
+	</div>
+</section>
+<h2 style="color:black;">And Many More Coming Soon...</h2>
+<br>
+<%- include("partials/footer"); -%>
