@@ -1948,3 +1948,14 @@ footer .footer-bottom .social-circle a {
     margin-bottom: 2rem;
   }
 }
+
+
+/*
+Timer
+*/
+#clock , .Time-title
+{
+  font-family: 'Press Start 2P', cursive;
+  font-size:15px;
+
+}
