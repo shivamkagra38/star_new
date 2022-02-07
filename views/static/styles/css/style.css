@@ -88,13 +88,13 @@ input[type="radio"] {
   font-size: 16px;
   font-weight: 600;
   opacity: 1;
-  /* background: #810000; */
-  background: gray;
+  background: #810000;
+  /* background: gray; */
   color: white;
   cursor: pointer;
   /* border-radius: 10px; */
   border: none;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -103,13 +103,13 @@ input[type="radio"] {
 .btn-submit:hover {
   color: white;
   background: gray;
-  /* background: rgb(220,0,32); */
+  background: rgb(220, 0, 32);
 }
 
 .btn-submit:active {
   position: relative;
-  /* top: 4px; */
-  /* box-shadow: none; */
+  top: 4px;
+  box-shadow: none;
 }
 
 .qdesc {
@@ -347,4 +347,19 @@ span {
   p {
     font-size: 18px !important;
   }
+}
+
+.Brochure
+{
+  background-color: maroon;
+  color:white;
+  padding:7px;
+  border-radius: 5px;
+  box-shadow: 1px 0px 2px 1px black;
+}
+.Brochure:hover{
+  background-color: white;
+  border:1px solid maroon;
+  color:maroon;
+  box-shadow: 0px 0px 0px 0px black;
 }

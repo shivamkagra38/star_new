@@ -198,6 +198,7 @@ nav .sub-menu a {
 
 #mainCarousel .carousel-inner img {
   width: 100%;
+  height: fit-content;
 }
 .carousel-h2-a {
   font-size: 2rem;
@@ -1669,11 +1670,9 @@ footer .footer-bottom .social-circle a {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
-.gallery
-{
-  display:none;
-}
+  .gallery {
+    display: none;
+  }
 
   .navbar-brand {
     font-size: 12px;
@@ -1694,11 +1693,11 @@ footer .footer-bottom .social-circle a {
 /*# sourceMappingURL=main.css.map */
 
 /* SMP Modal Box CSS */
-#SMPmodal{
-  background-color:rgb(255, 255, 255);
+#SMPmodal {
+  background-color: rgb(255, 255, 255);
   width: 50%;
   text-align: center;
-  border-radius : 0.5rem;
+  border-radius: 0.5rem;
   position: fixed;
   left: 25%;
   z-index: 1000;
@@ -1707,12 +1706,12 @@ footer .footer-bottom .social-circle a {
   visibility: hidden;
 }
 
-#SMPmodal.activePopup{
+#SMPmodal.activePopup {
   visibility: visible;
   top: 20%;
 }
 
-#SMPoverlay{
+#SMPoverlay {
   background-color: rgb(51, 50, 50);
   position: fixed;
   top: -100%;
@@ -1725,12 +1724,12 @@ footer .footer-bottom .social-circle a {
   visibility: hidden;
 }
 
-#SMPoverlay.activeBG{
+#SMPoverlay.activeBG {
   visibility: visible;
   top: 0%;
 }
 
-.SMPclose-modal-btn{
+.SMPclose-modal-btn {
   background-color: transparent;
   border: none;
   font-size: 2rem;
@@ -1744,35 +1743,35 @@ footer .footer-bottom .social-circle a {
   z-index: 10;
 }
 
-.SMPclose-modal-btn:hover{
+.SMPclose-modal-btn:hover {
   color: black;
   cursor: pointer;
 }
 
-.SMPmodal-title{
+.SMPmodal-title {
   color: rgb(240, 68, 68);
   position: relative;
   left: 0.5rem;
   margin-bottom: 0;
 }
 
-.SMPmodal-image{
+.SMPmodal-image {
   float: left;
   width: 17.5rem;
   height: 18rem;
 }
 
-.SMPmodal-content{
+.SMPmodal-content {
   font-size: 1.2rem;
   margin-right: 1rem;
   position: relative;
   top: 2rem;
 }
 
-.SMPmodal-CTA-btn{
+.SMPmodal-CTA-btn {
   position: relative;
   top: 2.2rem;
-  right: 1rem;
+  /* right: 1rem; */
   background-color: rgb(240, 68, 68);
   color: white;
   border: none;
@@ -1782,34 +1781,67 @@ footer .footer-bottom .social-circle a {
   width: 45%;
 }
 
-.SMPmodal-CTA-btn:hover{
-color: rgb(240, 68, 68);
-background-color: rgb(245, 243, 243);
-border: 0.1rem solid rgb(240, 68, 68);
-cursor: pointer;
+.SMPmodal-CTA-btn:hover {
+  color: rgb(240, 68, 68);
+  background-color: rgb(245, 243, 243);
+  border: 0.1rem solid rgb(240, 68, 68);
+  cursor: pointer;
 }
 
-@media screen and (max-width: 1106px) and (min-width: 1024px){
+.Time-title {
+  color: #e21919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 700px) and (max-width: 1300px) {
+  .Time-title {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .Time-title {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .Time-title {
+    margin: 2rem 0rem 1rem 0rem;
+  }
+}
 
-  .SMPmodal-title{
+@media only screen and (max-width: 499px) {
+  .Time-title {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .Time-title {
+    margin-top: -2rem;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1106px) and (min-width: 1024px) {
+  .SMPmodal-title {
     font-size: 2rem;
   }
-  
-  .SMPclose-modal-btn{
+
+  .SMPclose-modal-btn {
     position: relative;
     top: -0.3rem;
   }
-  
-  .SMPmodal-image{
+
+  .SMPmodal-image {
     width: 12rem;
     height: 13rem;
   }
-  
-  .SMPmodal-content{
+
+  .SMPmodal-content {
     font-size: 1.2rem;
   }
-  
-  .SMPmodal-CTA-btn{
+
+  .SMPmodal-CTA-btn {
     position: relative;
     top: 2rem;
     font-size: 1.5rem;
@@ -1818,64 +1850,64 @@ cursor: pointer;
   }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 914px){
-#SMPmodal{
-  padding-bottom: 1rem;
+@media screen and (max-width: 1024px) and (min-width: 914px) {
+  #SMPmodal {
+    padding-bottom: 1rem;
+  }
+
+  .SMPmodal-title {
+    font-size: 2rem;
+  }
+
+  .SMPclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .SMPmodal-image {
+    width: 12rem;
+    height: 13rem;
+  }
+
+  .SMPmodal-content {
+    font-size: 1rem;
+  }
+
+  .SMPmodal-CTA-btn {
+    position: relative;
+    top: 2rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+  }
 }
 
-.SMPmodal-title{
-  font-size: 2rem;
-}
-
-.SMPclose-modal-btn{
-  position: relative;
-  top: -0.3rem;
-}
-
-.SMPmodal-image{
-  width: 12rem;
-  height: 13rem;
-}
-
-.SMPmodal-content{
-  font-size: 1rem;
-}
-
-.SMPmodal-CTA-btn{
-  position: relative;
-  top: 2rem;
-  font-size: 1rem;
-  padding: 0.25rem;
-}
-}
-
-@media screen and (max-width: 914px) and (min-width: 425px){
-  #SMPmodal{
+@media screen and (max-width: 914px) and (min-width: 425px) {
+  #SMPmodal {
     padding-bottom: 1rem;
     width: 70%;
     position: fixed;
     left: 14%;
   }
-  
-  .SMPmodal-title{
+
+  .SMPmodal-title {
     font-size: 2rem;
   }
-  
-  .SMPclose-modal-btn{
+
+  .SMPclose-modal-btn {
     position: relative;
     top: -0.3rem;
   }
-  
-  .SMPmodal-image{
+
+  .SMPmodal-image {
     width: 12rem;
     height: 13rem;
   }
-  
-  .SMPmodal-content{
+
+  .SMPmodal-content {
     font-size: 1rem;
   }
-  
-  .SMPmodal-CTA-btn{
+
+  .SMPmodal-CTA-btn {
     position: relative;
     top: 1.5rem;
     font-size: 1.2rem;
@@ -1883,33 +1915,33 @@ cursor: pointer;
   }
 }
 
-@media screen and (max-width: 425px){
-  #SMPmodal{
+@media screen and (max-width: 425px) {
+  #SMPmodal {
     width: 80%;
     position: fixed;
     left: 7%;
   }
 
-  #SMPmodal.activePopup{
+  #SMPmodal.activePopup {
     top: 10%;
   }
 
-  .SMPmodal-title{
+  .SMPmodal-title {
     font-size: 1.8rem;
   }
 
-  .SMPmodal-image{
+  .SMPmodal-image {
     float: none;
     width: 9rem;
     height: 10rem;
   }
 
-  .SMPmodal-content{
+  .SMPmodal-content {
     position: relative;
     top: 0rem;
   }
 
-  .SMPmodal-CTA-btn{
+  .SMPmodal-CTA-btn {
     position: relative;
     top: 0rem;
     right: 0rem;
