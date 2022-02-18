@@ -105,25 +105,31 @@ app.get("/", launchStatus, function (req, res) {
   res.render("index");
 });
 
-app.get("/SMP-Programs", launchStatus, function (req, res) {
-  res.render("SMP-Programs");
+app.get("/register", launchStatus, function (req, res) {
+  res.render("Alum-reg");
 });
+app.get("/.well-known/acme-challenge/19o3y7xRq27hUm3MhIo9SIaiRu3-MYEkYHOydyrh6vw", launchStatus, function (req, res) {
+  res.send('19o3y7xRq27hUm3MhIo9SIaiRu3-MYEkYHOydyrh6vw');
+});
+app.get("/safarnama", launchStatus, function (req, res) {
+  res.render("safarnama");
+});
+
 app.get("/SMP-Registration", launchStatus, function (req, res) {
   res.render("SMP-Registration");
 });
 
-
-app.get("/register", launchStatus, function (req, res) {
-  res.render("Alum-reg");
+app.get("/SMP-Programs", launchStatus, function (req, res) {
+  res.render("SMP-Programs");
 });
 
 app.get("/contact", launchStatus, (req, res) => {
   res.render("contact");
 });
 
-app.get("/safarnama-form", launchStatus, function (req, res) {
-  res.render("form");
-});
+// app.get("/safarnama", launchStatus, function (req, res) {
+//   res.render("form");
+// });
 
 
 app.post("/message", async (req, res) => {
@@ -163,7 +169,6 @@ app.get("/aboutus", launchStatus, (req, res) => {
   res.render("aboutus");
 });
 
-
 app.get("/atalk", launchStatus, (req, res) => {
   res.render("Atalk");
 });
@@ -174,10 +179,6 @@ app.get("/va-meet", launchStatus, (req, res) => {
 
 app.get("/mentorship", launchStatus, (req, res) => {
   res.render("mentorship-program");
-});
-
-app.get("/safarnama", launchStatus, (req, res) => {
-  res.render("safarnama");
 });
 
 app.get("/fullteam", launchStatus, (req, res)=>{
@@ -194,9 +195,8 @@ app.put('/setActivation', (req, res)=>{
   res.send(launchStatusCode)
 })
 
-
-app.listen(process.env.PORT || 8080, function () {
-  console.log("Server running at port 8080");
+app.listen(process.env.PORT || 4500, function () {
+  console.log("Server running at port 4500");
 });
 
 

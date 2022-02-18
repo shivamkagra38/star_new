@@ -178,13 +178,15 @@
 			</a>
 			<div class="postcard__text t-dark">
 				<h1 class="postcard__title blue">Introduction To 3D Printing</h1>
+       <center><img src="images/programs/3d-m.svg" class="postcard__img" alt=""></center>
 				<div class="postcard__subtitle small">
 					<time datetime="2020-05-25 12:00:00">
 						<i class="fas fa-calendar-alt mr-2"></i>Instructor : Mr. Yash Gopal Mittal
 					</time>
 				</div>
+        
 				<!-- <div class="postcard__bar"></div> -->
-				<div class="postcard__preview-txt mt-5">
+				<div class="postcard__preview-txt mt-4">
   <!--
           <b>About the instructor-</b>
           <br>
@@ -193,7 +195,7 @@
           Joined IIT Bombay, as a direct-to-PhD research scholar.
           <br>
           Was awarded the prestigious Prime Minister Research Fellowship (PMRF).-->
-
+          
       <ul class="text-font"style="list-style-type:disc;">
        <li>
         Graduated from UIET with honors in mechanical engineering.
@@ -206,9 +208,12 @@
      </li>
     
     </ul>
-    <h5 class="align h5-font mt-5" style="color:#e21919;  font-size:25px;">Limited Seats Available!!!</h5>
-     <a href="/SMP-Registration"> <button class="but mt-4" style="background-color: maroon; color:whitesmoke;">Register Here!</button></a>
-        </div>
+    <h5 class="align h5-font" style="color:#e21919;  font-size:25px;">Limited Seats Available!!!</h5>
+    <h5 class="Time-title align" >Reg. Begins : <span id="clock"></span></h5>
+     <a href="/SMP-Registration"> <button id="SMP_btn"  class="but mt-3" style="background-color: maroon;display:none; color:whitesmoke;">Register Here!</button></a>
+     <br>
+    <a href="https://drive.google.com/file/d/17U_j8mkfereRsGtxeGA2zjwo-GCDbIB3/preview?usp=sharing" target="_blank"> <button class="but mt-3" style="background-color: maroon; color:whitesmoke;"> View Brochure</button></a>
+    </div>
 
 			</div>
      
@@ -220,4 +225,34 @@
 </section>
 <h2 style="color:black;">And Many More Coming Soon...</h2>
 <br>
+<script>
+    var btnSMP = document.getElementById("SMP_btn");
+  var countDownDate = new Date("Feb 17, 2022 11:00:00").getTime();
+  
+  var x = setInterval(function() {
+  
+    var now = new Date().getTime();
+  
+  
+    var distance = countDownDate - now;
+  
+  
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  
+    document.getElementById("clock").innerHTML = " "+days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("clock").innerHTML = "Forms Are Out !";
+      btnSMP.style.display="initial";
+    }
+  }, 1000);
+  
+  </script>
 <%- include("partials/footer"); -%>
