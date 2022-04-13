@@ -62,29 +62,14 @@ a:hover {
   font-size: 20px;
 }
 
-.smalltext-font {
-  font-size: 16px;
-  font-family: Nunito Sans Regular;
-}
-
 .separator {
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.mx-10 {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
 .mx-6 {
   margin-left: 6rem;
   margin-right: 6rem;
-}
-
-.mx-4 {
-  margin-left: 1rem !important;
-  margin-right: 1rem !important;
 }
 
 .my-7 {
@@ -114,15 +99,8 @@ a:hover {
 .red-btn {
   background: #810000;
   color: white;
-  margin-top: 40px;
 }
 
-/* .content-text > .red-btn {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 .top-header {
   background: #d1cdcd;
   display: block;
@@ -172,10 +150,6 @@ nav .navbar-brand {
   color: white;
 }
 
-.navbar {
-  padding: 0.2rem 0.8rem !important;
-}
-
 nav .nav-item:focus .sub-menu,
 nav .nav-item:focus-within .sub-menu,
 nav .nav-item:hover .sub-menu {
@@ -212,27 +186,193 @@ nav .sub-menu a {
   text-decoration: none;
 }
 
+/**firstsection*/
+
+#mainCarousel {
+  margin-top: 2.9rem;
+}
+
 #mainCarousel .carousel-inner {
   background-color: #00000070;
 }
 
 #mainCarousel .carousel-inner img {
   width: 100%;
+ 
+}
+.carousel-h2-a {
+  font-size: 2rem;
+}
+@media (min-width: 350px) and (max-width: 500px) {
+  .carousel-h2-a {
+    font-size: 1rem;
+    margin-bottom: -9px;
+  }
+  .carousel-h2-p {
+    font-size: 1.2rem;
+    margin-bottom: -9px;
+  }
+}
+@media (min-width: 100px) and (max-width: 349px) {
+  .carousel-h2-a {
+    font-size: 0.9rem;
+    margin-bottom: -9px;
+  }
+  .carousel-h2-p {
+    font-size: 0.8rem;
+    margin-bottom: -9px;
+  }
+}
+@media (min-width: 501px) {
+  .carousel-h2-p {
+    font-size: 1.5rem;
+  }
 }
 
+@media (min-width: 1110px) {
+  .smalltext-font {
+    line-height: 2rem;
+  }
+}
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  /* font-size: 1.25rem; */
+  line-height: inherit;
+  white-space: nowrap;
+  color: white;
+}
+@media (max-width: 398px) {
+  .navbar-brand1 {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 311px) {
+  .navbar-brand1 {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  #mainCarousel {
+    height: 250px;
+  }
+  .carousel-image {
+    height: 250px;
+  }
+}
+/***upcoming events*/
 #upcoming-events {
   background: #f5f5f5;
 }
 
 #upcoming-events-carousel {
-  height: 300px;
-  width: 500px;
+  margin: 0 auto;
+  width: 90%;
   background: #f5f5f5;
 }
+@media (min-width: 900px) {
+  .upcoming-div {
+    width: 282%;
+  }
+}
+@media (min-width: 440px) and (max-width: 600px) {
+  #upcoming-events-carousel-inner img {
+    height: 100%;
+    width: 80%;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 360px) and (max-width: 439px) {
+  #upcoming-events-carousel-inner img {
+    height: 100%;
+    width: 84%;
+    margin-left: 2rem;
+  }
+}
 
-#upcoming-events-carousel-inner img {
-  height: 300px;
-  width: 400px;
+@media (min-width: 305px) and (max-width: 359px) {
+  #upcoming-events-carousel-inner img {
+    height: 100%;
+    width: 89%;
+    margin-left: 1.4rem;
+  }
+}
+@media (max-width: 304px) {
+  #upcoming-events-carousel-inner img {
+    height: 100%;
+    width: 91%;
+    margin-left: 1.1rem;
+  }
+}
+@media (min-width: 601px) {
+  #upcoming-events-carousel {
+    height: 611px;
+  }
+  #upcoming-events-carousel {
+    width: 100%;
+    /* margin-left: 3rem; */
+    margin-top: 3rem;
+  }
+  .hd {
+    margin-left: 2rem;
+    margin-right: 1px;
+    margin-top: 2rem;
+  }
+  .color-indication {
+    display: block;
+  }
+}
+@media (min-width: 440px) and (max-width: 600px) {
+  #upcoming-events-carousel {
+    height: 447px;
+  }
+}
+@media (min-width: 350px) and (max-width: 439px) {
+  #upcoming-events-carousel {
+    height: 362px;
+  }
+}
+@media (min-width: 280px) and (max-width: 349px) {
+  #upcoming-events-carousel {
+    height: 319px;
+  }
+}
+@media (max-width: 279px) {
+  #upcoming-events-carousel {
+    height: 272px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1109px) {
+  #upcoming-events-carousel-inner img {
+    height: 100%;
+    width: 78%;
+  }
+}
+@media (min-width: 1110px) {
+  #upcoming-events-carousel-inner img {
+    width: 61%;
+  }
+}
+@media (min-width: 1110px) {
+  .hd {
+    margin-right: 2.5rem;
+    margin-top: 3rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1110px) {
+  #upcoming-events-carousel {
+    height: 520px;
+  }
+}
+@media (min-width: 900px) {
+  .c {
+    margin-left: 8rem;
+  }
 }
 
 #upcoming-events .carousel-indicators-numbers li {
@@ -254,14 +394,56 @@ nav .sub-menu a {
   height: 30px;
   background-color: #000000;
 }
+@media (min-width: 900px) {
+  .upcoming-section {
+    display: flex;
+  }
+}
+.smalltext-font {
+  font-family: Nunito Sans Regular;
+}
+.headings {
+  font-size: 2rem;
+}
 
+@media (max-width: 450px) {
+  .headings {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 320px) {
+  .headings {
+    font-size: 1.4rem;
+  }
+}
 .headlines a:hover {
   color: grey;
 }
-
-.get-involved-card {
-  padding: 5.7vh;
+@media (max-width: 600px) {
+  .color-indication {
+    display: block;
+  }
+  .headlines-li {
+    margin-right: 1rem;
+  }
 }
+@media (min-width: 420px) and (max-width: 600px) {
+  .smalltext-font {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 350px) and (max-width: 419px) {
+  .smalltext-font {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 349px) {
+  .smalltext-font {
+    font-size: 0.85rem;
+  }
+}
+
+/***getInvolved*/
 
 .get-involved-card a {
   color: #343a40;
@@ -281,11 +463,18 @@ nav .sub-menu a {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  object-fit: cover;
 }
 
 .get-involved-card .card-inner .card-back {
   opacity: 0;
+}
+@media (max-width: 600px) {
+  .m-x-10 {
+    margin-right: 10rem;
+  }
+  .get-involved-card {
+    padding: 5.7vh;
+  }
 }
 
 .get-involved-card .separator {
@@ -311,9 +500,89 @@ nav .sub-menu a {
   opacity: 1;
 }
 
+/***below600*/
+@media (max-width: 600px) {
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 601px) {
+  .row2 {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1060px) {
+  .row2 {
+    display: flex;
+    align-items: center;
+    margin-left: 61px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1059px) {
+  .row2 {
+    display: flex;
+    align-items: center;
+  }
+}
+/****what wedo*/
+
+@media (min-width: 900px) {
+  .row-what {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .separator {
+    width: 12rem;
+    height: 13rem;
+  }
+}
+@media (max-width: 600px) {
+  .what-card {
+    margin-bottom: 1rem;
+  }
+  .row-what {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 461px) and (max-width: 600px) {
+  .what-card {
+    width: 54%;
+  }
+}
+@media (min-width: 400px) and (max-width: 460px) {
+  .what-card {
+    width: 60%;
+  }
+}
+@media (min-width: 360px) and (max-width: 399px) {
+  .what-card {
+    width: 67%;
+  }
+}
+@media (min-width: 316px) and (max-width: 359px) {
+  .what-card {
+    width: 73%;
+  }
+}
+@media (min-width: 280px) and (max-width: 316px) {
+  .what-card {
+    width: 82%;
+  }
+}
+@media (max-width: 279px) {
+  .what-card {
+    width: 93%;
+  }
+}
+
 .whatwedo {
   background: #f5f5f5;
-  padding: 40px;
 }
 
 .whatwedo .separator {
@@ -341,7 +610,6 @@ nav .sub-menu a {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  object-fit: cover;
 }
 
 .whatwedo .card-inner .card-back {
@@ -350,6 +618,105 @@ nav .sub-menu a {
 
 .whatwedo .whatwedo-card:hover .card-inner {
   transform: rotateY(180deg);
+}
+/*director message**/
+.directors-message-row {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .j-img {
+    width: 100%;
+    margin-left: 2rem;
+  }
+  .lead {
+    font-size: 1.1rem;
+  }
+  @media (min-width: 1110px) {
+    .j-img {
+      margin-top: 2rem;
+      padding: 5.5rem;
+    }
+    .lead {
+      margin-left: -40px;
+      font-size: 1.2rem;
+      margin-right: 2rem;
+      margin-top: -46px;
+      line-height: 2rem;
+    }
+    .sep1 {
+      width: 12rem;
+      height: 16rem;
+    }
+  }
+  .message-div {
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .directors-message-row {
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .directors-message-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .j-img {
+    width: 73%;
+  }
+  .message-div {
+    padding: 0.6rem 0.7rem;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 600px) {
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 449px) {
+  .lead {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media (min-width: 368px) and (max-width: 600px) {
+  .headings1 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 338px) and (max-width: 367px) {
+  .headings1 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 316px) and (max-width: 367px) {
+  .headings1 {
+    font-size: 1rem;
+  }
+  .headings1-img {
+    height: 1.8rem;
+  }
+}
+@media (max-width: 315px) {
+  .headings1 {
+    font-size: 0.8rem;
+  }
+  .headings1-img {
+    height: 0.8rem;
+  }
 }
 
 .youtube {
@@ -366,6 +733,89 @@ nav .sub-menu a {
   background: #000000;
 }
 
+.row5 {
+  display: flex;
+
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (max-width: 600px) {
+  .row5 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-network {
+    margin-left: -2rem;
+  }
+}
+@media (min-width: 400px) {
+  .frame-img {
+    width: 560px;
+    height: 315px;
+  }
+}
+@media (min-width: 300px) and (max-width: 399px) {
+  .frame-img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 299px) {
+  .frame-img {
+    width: 232px;
+    height: 224px;
+  }
+}
+@media (min-width: 290px) and (max-width: 365px) {
+  .contact-h6 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 298px) {
+  .contact-h6 {
+    font-size: 0.77rem;
+  }
+}
+.p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 291px) and (max-width: 350px) {
+  .map {
+    width: 86%;
+  }
+}
+@media (max-width: 290px) {
+  .map {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .card-back {
+    margin-top: -4rem;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 322px) and (max-width: 600px) {
+  .card-back {
+    font-size: 0.9rem;
+    margin-top: -3rem;
+  }
+}
+@media (min-width: 260px) and (max-width: 321px) {
+  .card-back {
+    font-size: 0.8rem;
+    margin-top: -3rem;
+  }
+}
+@media (max-width: 259px) {
+  .card-back {
+    font-size: 0.7rem;
+    margin-top: -3rem;
+  }
+}
 .box {
   position: relative;
   width: 300px;
@@ -557,7 +1007,6 @@ nav .sub-menu a {
 
 .content-text {
   animation-delay: 0.4s;
-  font-weight: bold;
 }
 
 .ending-text {
@@ -971,10 +1420,6 @@ iframe {
 .a-meet .season-section .season-no {
   font-size: 24;
   color: #810000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 0px;
 }
 
 .a-meet .season-section .card .card-img {
@@ -987,7 +1432,6 @@ iframe {
   display: block;
   width: 100%;
   height: 286px;
-  object-fit: cover;
 }
 
 .a-meet .season-section .card-back {
@@ -1224,62 +1668,12 @@ footer .footer-bottom .social-circle a {
   }
 }
 
-@media only screen and (max-width: 950px) {
-  .card-direct {
-    display: flex;
-    flex-direction: column;
-  }
-  .correction {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  .colr-4 {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: max-content;
-  }
-  .mx-4 {
-    margin-left: -2rem !important;
-    margin-right: -2rem !important;
-  }
-  .mx-5 {
-    margin-left: 2rem !important ;
-    margin-right: 2rem !important;
-  }
-
-  .a-meet .season-section .card .card-img {
-    height: 700px;
-  }
-
-  .a-meet .season-section .card-front {
-    height: 700px;
-  }
-
-  .a-meet .season-section .card-back {
-    height: 700px;
-  }
-
-  .a-meet .season-section .card-text {
-    font-size: 35px;
-  }
-  .a-meet .season-section .season-no {
-    font-size: 40px;
-  }
-  .largetext-font {
-    font-size: 36px;
-  }
-  .btn {
-    font-size: 2rem;
-    padding: 0.375rem 1.5rem;
-  }
-  .size {
-    font-size: 30px;
-  }
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .gallery {
+    display: none;
+  }
+
   .navbar-brand {
     font-size: 12px;
   }
@@ -1288,119 +1682,8 @@ footer .footer-bottom .social-circle a {
     font-weight: 900;
     font-size: 15px;
   }
-
-  .card-direct {
-    display: flex;
-    flex-direction: column;
-    /* width: fit-content; */
-  }
-  .correction {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  .colr-4 {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: max-content;
-  }
-  .mx-4 {
-    margin-left: -2rem !important;
-    margin-right: -2rem !important;
-  }
-  .mx-5 {
-    margin-left: 2rem !important ;
-    margin-right: 2rem !important;
-  }
-
-  .a-meet .season-section .card .card-img {
-    height: 286px !important;
-  }
-
-  .a-meet .season-section .card-front {
-    height: 286px !important;
-  }
-
-  .a-meet .season-section .card-back {
-    height: 286px !important;
-  }
-  .a-meet .season-section .card-text {
-    font-size: 16px;
-  }
-  .a-meet .season-section .season-no {
-    font-size: 24px;
-  }
-  .largetext-font {
-    font-size: 20px;
-  }
-  .btn {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-  }
-  .size {
-    font-size: 1rem;
-  }
 }
 
-@media only screen and (max-width: 550px) {
-  .a-meet .season-section .card .card-img {
-    height: 500px !important;
-  }
-
-  .a-meet .season-section .card-front {
-    height: 500px !important;
-  }
-
-  .a-meet .season-section .card-back {
-    height: 500px !important;
-  }
-  .a-meet .season-section .card-text {
-    font-size: 20px;
-  }
-  .a-meet .season-section .season-no {
-    font-size: 40px !important;
-  }
-  .largetext-font {
-    font-size: 30px;
-  }
-  .btn {
-    padding: 0.375rem 0.75rem;
-    font-size: 1.5rem !important;
-  }
-  .size {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .a-meet .season-section .card .card-img {
-    height: 286px !important;
-  }
-
-  .a-meet .season-section .card-front {
-    height: 286px !important;
-  }
-
-  .a-meet .season-section .card-back {
-    height: 286px !important;
-  }
-  .a-meet .season-section .card-text {
-    font-size: 16px;
-  }
-  .a-meet .season-section .season-no {
-    font-size: 24px !important;
-  }
-  .largetext-font {
-    font-size: 20px;
-  }
-  .btn {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem !important;
-  }
-  .size {
-    font-size: 1rem;
-  }
-}
 .upcoming {
   color: #8f4757;
 }
@@ -1409,15 +1692,270 @@ footer .footer-bottom .social-circle a {
 }
 /*# sourceMappingURL=main.css.map */
 
+/* SMP Modal Box CSS */
+#SMPmodal {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  text-align: center;
+  border-radius: 0.5rem;
+  position: fixed;
+  left: 25%;
+  z-index: 1000;
+  transition: 0.5s;
+  top: -100%;
+  visibility: hidden;
+}
+
+#SMPmodal.activePopup {
+  visibility: visible;
+  top: 20%;
+}
+
+#SMPoverlay {
+  background-color: rgb(51, 50, 50);
+  position: fixed;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  transition: 0.5s;
+  opacity: 80%;
+  visibility: hidden;
+}
+
+#SMPoverlay.activeBG {
+  visibility: visible;
+  top: 0%;
+}
+
+.SMPclose-modal-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  right: 0.8rem;
+  top: 0.5rem;
+  color: rgb(145, 142, 142);
+  z-index: 10;
+}
+
+.SMPclose-modal-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.SMPmodal-title {
+  color: rgb(240, 68, 68);
+  position: relative;
+  left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.SMPmodal-image {
+  float: left;
+  width: 17.5rem;
+  height: 18rem;
+}
+
+.SMPmodal-content {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  position: relative;
+  top: 2rem;
+}
+
+.SMPmodal-CTA-btn {
+  position: relative;
+  top: 2.2rem;
+  /* right: 1rem; */
+  background-color: rgb(240, 68, 68);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 45%;
+}
+
+.SMPmodal-CTA-btn:hover {
+  color: rgb(240, 68, 68);
+  background-color: rgb(245, 243, 243);
+  border: 0.1rem solid rgb(240, 68, 68);
+  cursor: pointer;
+}
+
+.Time-title {
+  color: #e21919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
 @media only screen and (min-width: 700px) and (max-width: 1300px) {
-  .pagehead {
-    height: 250px;
-    /* object-fit: cover; */
+  .Time-title {
+    margin-top: 3rem;
   }
 }
 @media only screen and (max-width: 699px) {
-  .pagehead {
-    height: 200px;
-    /* object-fit: cover; */
+  .Time-title {
+    margin: 0rem 0rem 1rem 0rem;
   }
+}
+@media only screen and (max-width: 560px) {
+  .Time-title {
+    margin: 2rem 0rem 1rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .Time-title {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .Time-title {
+    margin-top: -2rem;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1106px) and (min-width: 1024px) {
+  .SMPmodal-title {
+    font-size: 2rem;
+  }
+
+  .SMPclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .SMPmodal-image {
+    width: 12rem;
+    height: 13rem;
+  }
+
+  .SMPmodal-content {
+    font-size: 1.2rem;
+  }
+
+  .SMPmodal-CTA-btn {
+    position: relative;
+    top: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 914px) {
+  #SMPmodal {
+    padding-bottom: 1rem;
+  }
+
+  .SMPmodal-title {
+    font-size: 2rem;
+  }
+
+  .SMPclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .SMPmodal-image {
+    width: 12rem;
+    height: 13rem;
+  }
+
+  .SMPmodal-content {
+    font-size: 1rem;
+  }
+
+  .SMPmodal-CTA-btn {
+    position: relative;
+    top: 2rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 914px) and (min-width: 425px) {
+  #SMPmodal {
+    padding-bottom: 1rem;
+    width: 70%;
+    position: fixed;
+    left: 14%;
+  }
+
+  .SMPmodal-title {
+    font-size: 2rem;
+  }
+
+  .SMPclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .SMPmodal-image {
+    width: 12rem;
+    height: 13rem;
+  }
+
+  .SMPmodal-content {
+    font-size: 1rem;
+  }
+
+  .SMPmodal-CTA-btn {
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #SMPmodal {
+    width: 80%;
+    position: fixed;
+    left: 7%;
+  }
+
+  #SMPmodal.activePopup {
+    top: 10%;
+  }
+
+  .SMPmodal-title {
+    font-size: 1.8rem;
+  }
+
+  .SMPmodal-image {
+    float: none;
+    width: 9rem;
+    height: 10rem;
+  }
+
+  .SMPmodal-content {
+    position: relative;
+    top: 0rem;
+  }
+
+  .SMPmodal-CTA-btn {
+    position: relative;
+    top: 0rem;
+    right: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
+/*
+Timer
+*/
+#clock , .Time-title
+{
+  font-family: 'Press Start 2P', cursive;
+  font-size:10px;
+
 }

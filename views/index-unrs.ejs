@@ -1,0 +1,408 @@
+<%- include("partials/header"); -%>
+
+<!-- SMP Modal Box -->
+<div class="SMPoverlay" id="SMPoverlay" onclick="popupToggle();"></div>
+    <div class="SMPmodal" id="SMPmodal">
+        <button class="SMPclose-modal-btn" id="SMPclosebtn" onclick="popupToggle();">&times;</button>
+        <h1 class="SMPmodal-title">Student Mentorship Program</h1>
+        <img class="SMPmodal-image" src="images/home/smp-modal-img.png">
+        <p class="SMPmodal-content">It is a novel initiative undertaken by STAR, UIET, with the aim to enable positive and constructive interaction through the guidance provided by our Alumni to the Students.</p>
+        <a href="/SMP-Programs">
+            <button class="SMPmodal-CTA-btn">
+                Register
+            </button>
+        </a>
+    </div>
+    <script>
+      function popupToggle(){
+          const popup = document.getElementById('SMPmodal');
+          const backdrop = document.getElementById('SMPoverlay');
+          popup.classList.toggle('activePopup');
+          backdrop.classList.toggle('activeBG');
+      }
+      popupToggle();
+  </script>
+
+<!--    MAIN CAROUSEL   -->
+
+   
+      <div id="mainCarousel" class="carousel slide carousel-fade " data-interval="6000" data-ride="carousel" data-pause="false" data-ride="true">
+
+        <ul class="carousel-indicators">
+          <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#mainCarousel" data-slide-to="1"></li>
+          <li data-target="#mainCarousel" data-slide-to="2"></li>
+        </ul>
+      
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="SMP-Programs"><img src="images/home/one.gif" data-toggle="modal" data-target="#myModal"></a>
+            <div class="carousel-caption">
+              <h3 class="my-4"></h3> 
+              <!--<p>Welcome to the official website of STAR UIET , <a href="https://puchd.ac.in/" target="blank" style="color: white;">Panjab University, Chandigarh.</a></p>-->
+            </div>
+            
+          </div>
+          <div class="carousel-item">
+            <img src="images/home/TEMP3.gif" >
+            <div class="carousel-caption">
+              <h3>  <a href="/register"
+                style="color: white; text-decoration: none;" >REGISTER HERE!</a></h3>
+              <p>*For Alumni of UIET,Panjab University Chandigarh </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/home/TEMP4.gif"  >
+            <div class="carousel-caption">
+              <h2><a href="https://www.youtube.com/user/UIETAlumni" style="color: white; text-decoration: none;" target="blank">CLICK HERE!</a> </h2>
+              <p> Stream with us on youtube</p>
+            </div>
+          </div> 
+        </div>
+     
+        <a class="carousel-control-prev" href="#mainCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#mainCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+       
+
+
+      </div>
+ 
+<!--            UPCOMING EVENTS CAROUSEL           -->
+
+    <section id="upcoming-events" class="py-3">
+<div class="text-center pt-3">
+  <h2 class="headings py-3">RECENT EVENTS</h2>
+</div>
+
+      <section class="row px-4 py-4" style="overflow-x: hidden;">
+        <div class="col-5 order-1 ml-5  my-auto ;" style="padding-left: 15vh " >
+
+      <div id="upcoming-events-carousel" style="height: 700px;" class="carousel slide carousel-fade " data-interval="2000" data-ride="carousel" data-pause="false" data-ride="true">
+
+        <ol class="carousel-indicators carousel-indicators-numbers" >
+          <li data-target="#upcoming-events-carousel" data-slide-to="0" class="active">1</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="1">2</li>
+          <li data-target="#upcoming-events-carousel" data-slide-to="2">3</li>
+        </ol>
+      
+      
+        <div class="carousel-inner" id="upcoming-events-carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/a-meet/eng.png" style="height: 100%; width: 100%;" >
+            
+          </div>
+          <div class="carousel-item">
+            <img src="images/a-meet/workshop2.jpeg" style="height: 100%; width: 100%;" >
+           
+          </div>
+          <div class="carousel-item">
+            <img src="images/a-meet/workshop1.jpeg" style="height: 100%; width: 100%;" >
+            
+          </div> 
+        </div>
+
+      </div>
+      
+      </div>
+
+      <div class="col-5 order-sm-2 ml-0 my-auto" style="padding-left: 10%;">
+        <ul class="headlines">
+          <h3 class="largetext-font">Headlines <span class="color-indication" style="margin-left: 12px;"><span class="upcoming" style="font-size: 12px; margin-right: 4px; color: #02ba21;">Upcoming</span>/<span class="passed" style="font-size: 12px; margin-left: 4px; color: #8f4757;">Passed</span></span></h3>
+          <li>
+           <a href="" class="smalltext-font passed"> To raise the already high fever pitch and to address a slew of intriguing questions, we are eminently proud to present to you the journey of people who have performed well in the startup environment, core engineering disciplines, and their exciting researches in the tech field.Buckle yourselves up to get the chance to score a great deal of knowledge and get to witness the story of their beautiful journey with our series "SAFARNAMA".</a>>
+          </li>
+         <!-- <li> <a href="https://apjpu.webex.com/url3300/j.do?UID=592856312&RT=MiM0MQ%3D%3D&siteurl=apjpu&apiname=j.php&MTID=mb3faeef0e77aadb2db6be9306761a3d6&rnd=1877844306&ED=1455098072&needFilter=false" class="smalltext-font upcoming">On the occasion of Engineer's Day, Panjab University is Holding a conference on Mission @Atma Nirbhar Bharat: Engineers at the Forefront. Register yourself by clicking on this link.</a> -->
+          </li>
+          <li> <a href="http://bit.ly/PlacementPrep103" class="smalltext-font passed">Mr Kumar Gaurav (Ex-Associate Director at KPMG) will conduct a Workshop on LinkedIn (How to use, create and network). Scheduled for August 24, 2021, from 12 PM onward</a> 
+          </li>
+          <li><a href="https://www.youtube.com/watch?v=gE7AjLXAg1U&t=8s" class="smalltext-font passed" >The workshop by Mr Nimish Khurana was focused on providing the students with the strategies to crack FAANG interviews and discuss the experience of the interview in Google.</a> </li>
+        </ul>  
+      </div>
+
+    </div>
+    <div>
+  
+    </section >
+      
+  </section>
+<!--          GET INVOLVED     -->
+
+<section class="text-center get-involved py-3">
+  <div class="text-center pt-3">
+    <h2 class="headings py-3">GET INVOLVED</h2>
+  </div>
+  
+  <div class="get-involved-cards mx-10 my-3">
+    <div class="row">
+      <div class="get-involved-card col-3">
+        <a href="/mentorship" style="text-decoration: none;">
+          <div class="separator justify-content">
+            <div class="card-inner">
+              <div class="card-front">
+                <i class="fas fa-users my-4 fa-3x"></i>
+                <h6>STUDENT MENTORSHIP PROGRAM</h6>
+              </div>
+              <div class="card-back my-3">
+                <p class="smalltext-font" > This initiative allows the alumni to act as mentor for the students, by helping them guide their career path</p>
+              </div>
+            </div>
+            
+          </div>
+          
+        </a>
+      </div>
+      <div class="get-involved-card col-3">
+        <!-- <a href="" style="text-decoration: none;"> -->
+          <div class="separator">
+            <div class="card-inner">
+              <div class="card-front">
+                <i class="fas fa-trophy my-4 fa-3x"></i>
+                <h6>SHARE YOUR ACHIEVEMENTS</h6>
+              </div>
+              <div class="card-back my-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcEggdgCu72kwXrCB0Y_uxYyRmFHoDJ0tZe6cXmS9wXyfN6A/viewform?usp=sf_linkhttps://docs.google.com/forms/d/e/1FAIpQLSfcEggdgCu72kwXrCB0Y_uxYyRmFHoDJ0tZe6cXmS9wXyfN6A/viewform?usp=sf_link">
+                  <p class="smalltext-font text-white">Showcase your achievements through our platform to inspire the students</p>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+          
+        <!-- </a> -->
+      </div>
+      <div class="get-involved-card col-3" style="cursor: pointer;">
+        <a href="" style="text-decoration: none;">
+          <div class="separator">
+            <div class="card-inner">
+              <div class="card-front">
+                <i class="fas fa-road my-4 fa-3x"></i>
+                <h6>CAREER <br> OPPORTUNITIES</h6>
+              </div>
+              <div class="card-back mt-4">
+                <p class="smalltext-font">Build connections through alumni and get a chance to boost your career profile</p>
+              </div>
+            </div>
+            
+          </div>
+          
+        </a>
+      </div>
+      <div class="get-involved-card col-3">
+        <a href="" style="text-decoration: none;">
+          <div class="separator">
+            <div class="card-inner">
+              <div class="card-front">
+                <img class="my-4" src="/images/home/join-us-gif.gif" width="100%" alt="">
+                
+              </div>
+              <div class="card-back my-3">
+                <a href="" data-toggle="modal" data-target="#joinUsModal" style="text-decoration: none;">
+                  <p class="smalltext-font text-white">Work with us to establish a strong student-alumni bond through various initiatives</p>
+                </a>
+                </div>
+            </div>
+          </div>
+        </a>
+        <div class="modal fade" id="joinUsModal" tabindex="-1" role="dialog" aria-labelledby="joinUsModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="joinUsModal">Join Us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body m-2">
+                <div class="row my-3">
+                  <div class="col-12">
+                    <div class="card shadow-sm">
+                      <div class="card-body">
+                        <!-- <h5 class="card-title">As M</h5> -->
+                        <p class="card-text text-justify">
+                          Bringing together all the Alumni situated in various parts of the world together, through our Alumni Reunions, STAR offers the pass-outs of UIET with a chance to connect with their memories and the experience that they had with their fellow mates. 
+                          <br> Giving you a chance to impart your knowledge to ones who now stand in the shoes, where you did before.
+                        </p>
+                        <button class="btn btn-secondary red-btn">Join Us As Alumni</button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card shadow-sm">
+                      <div class="card-body px-3">
+                        <p class="card-text mb-4">
+                          Being one of the most professional in its drive, STAR focuses on overall growth for not just its members but for all the students of UIET.
+                          
+                        </p>
+                        <button class="btn btn-secondary red-btn">Join Us As A Student</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--         WHAT WE DO            -->
+
+<section class="whatwedo">
+  <div class="container">
+    <div class="text-center pb-5">
+      <h2 class="headings py-3">ABOUT STAR</h2>
+    </div>
+    
+    <div class="row">
+      <div class="col-12">
+        <p class="smalltext-font text-justify">STAR (Students Team for Alumni Relations) has been carrying forward its legacy by organizing events and activities yearly, and by starting up new digitalized initiatives.
+           It continuously ventures to strengthen the relations of Alumni of UIET and their alma mater. It has been hosting a wide range of events like A-Talk, Virtual Alumni Meet, Rewired, and many other informative events through the distinguished alumni of our college. It looks forward to further build and advance the aim of this committee, i.e.,
+           to foster the bond between the Alumni, Institute, and its students.</p>
+      </div>
+      <div  class="col-12 whatwedo-cards">
+        <h5 class="largetext-font text-center py-3">WHAT WE DO</h5>
+        <div class="row">
+          <div class="whatwedo-card col-4 text-center">
+            <div class="separator">
+
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fas fa-university mt-5 mb-3 fa-5x"></i>
+                  <h5 class="largetext-font">FOR THE INSTITUTION</h5>
+                </div>
+                <div class="card-back">
+                  <p class="my-5">An institution is known by its alumni. We work towards building up this bond between the eminent alumni with UIET through a mutually beneficial relationship.</p>
+                </div>
+              </div>
+                       
+            </div>
+          </div>
+
+          <div class="whatwedo-card col-4 text-center">
+            <div class="separator">
+
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="fas fa-user-graduate fa-5x mt-5 mb-3"></i>
+                  <h5 class="largetext-font">FOR THE STUDENTS</h5>
+                </div>
+                <div class="card-back">
+                  <p class="my-5">STAR has been striving to help the students of UIET through multiple initiatives, many involving guidance provided by our esteemed alumni.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="whatwedo-card col-4 text-center">
+            <div class="separator">
+
+              <div class="card-inner">
+                <div class="card-front">
+                  <i class="far fa-handshake mt-5 mb-3 fa-5x"></i>
+                  <h5 class="largetext-font">FOR THE ALUMNI</h5>
+                </div>
+                <div class="card-back">
+                  <p class="my-5"><a href="https://www.linkedin.com/in/uietalumniaffairscell">STAR provides the alumni with a gateway to their alma mater, UIET, through our LinkedIn profile. This platform would enable the alumni to get in touch with their batchmates, classmates, seniors and even juniors.</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--          Director's Message       -->
+
+    <section class="Director py-3">
+
+      <div class="text-center pt-3">
+        <h3 class="headings py-3">Director's Message</h3>
+      </div>
+      <div class="row px-5 py-5">
+        <div class="col-7 order-2 my-auto">
+          <p class="lead text-justify"> "I am happy to take this opportunity to introduce you to the University Institute of Engineering and Technology (UIET), an in-campus Engineering Institute situated in the heart of Panjab University, Chandigarh. Since its establishment, UIET has come a long way and is geared towards rapid growth. This newsletter you're about to read culminates the entire years' worth of college experience in a few pages. I hope the readers find the content interesting. 
+            I would also take this opportunity to address how tough last year has been for all of us. I sympathize with everyone who has suffered. Slowly but steadily, we are recovering from the losses with hope for a better tomorrow.
+            I hope that the first edition of our  newsletter finds you well and takes you back to your beloved college lives." - <span style="font-weight: 400;">Prof. Jatinder Kumar Goswamy</span>
+          </p></div>
+        <div class="col-5 order-1 pt-2">
+          <img src="images/home/J.K. Goswamy.jpeg" width="100%" height="100%" >  </div>
+      </div>
+    </section>
+  
+    <section style="background-color: black; padding-top: 5vh;">
+    <div class="text-center">
+      <h3 class="headings py-3" style = " color :white;  "> JOIN US - STAR FAMILY</h3>
+      <br>
+      <p class="smalltext-font" style="color: white; padding-top: 3vh;">Join our team to become your best professional-self and get closer to the numerous career opportunities by building relations with our global alumni. </p>
+      <br>
+    </div>
+  </section>
+   
+  <!--             GALLERY -->
+   
+    <section class="gallery ">
+     <div class="row">
+       <div class="col-12">
+        <div class="box " >
+          <span class = "gallery-pics" style="--i:1"><img class="gallery-pic" src ="images/home/img1.jpg"></span>
+          <span class = "gallery-pics" style="--i:2"><img class="gallery-pic" src ="images/home/img2.jpeg"></span>
+          <span class = "gallery-pics" style="--i:3"><img class="gallery-pic" src ="images/home/img3.jpg"></span>
+          <span class = "gallery-pics" style="--i:4"><img class="gallery-pic" src ="images/home/img4.jpeg"></span>
+          <span class = "gallery-pics" style="--i:5"><img class="gallery-pic" src ="images/home/img5.jpg"></span>
+          <span class = "gallery-pics" style="--i:6"><img class="gallery-pic" src ="images/home/img6.jpg"></span>
+          <span class = "gallery-pics" style="--i:7"><img class="gallery-pic" src ="images/home/img7.jpg"></span>
+          <span class = "gallery-pics" style="--i:8"><img class="gallery-pic" src ="images/home/img8.jpeg"></span>
+        </div>
+       </div>
+      
+      </div>
+      
+   
+    </section>
+
+    
+    <section class="youtube " >
+
+      <div class="text-center">
+        <h3 class="headings py-3" style = " color :white;">STAY CONNECTED ON <a href="https://www.youtube.com/user/UIETAlumni" target="blank" ><img src="images/home/YouTube-Logo.png" height="40px" width="auto"></a> </h3>
+      </div>
+      <div class="row px-5 py-4" >
+        
+            <div  class="col-6 order-1 my-auto" style="display: flex; justify-content: center;">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/pKRIMPBVtwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div  class="col-6 order-2 my-auto" style="display: flex; justify-content: center;">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/nxwo1aD0V-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+           
+      </div>
+      <div class="row px-5 py-4"  >
+        <div  class="col-6 order-3 my-auto" style="display: flex; justify-content: center;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4-Aajj3q5l4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div  class="col-6 order-4 my-auto" style="display: flex; justify-content: center;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jrRioR0vMWU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+        </div>
+      </div>
+
+          </section>
+
+  <%- include("partials/footer"); -%>
+
+  
