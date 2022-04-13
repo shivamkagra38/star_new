@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap" rel="stylesheet">
+  
   <!--TIMER-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,21 +94,43 @@
 <body>
   <div style="min-height: 100vh">
 
-    <!-- SMP Modal Box -->
-    <!-- <div class="SMPoverlay" id="SMPoverlay" onclick="popupToggle();"></div>
+
+    <!-- Timer for modal box -->
+    <!-- <h4 class="Time-title">Reg. Begins : <span id="clock"></span></h4>
+      <h4 class="Time-title">Registration Ended </h4> -->
+
+
+
+    <!-- Civil Services Day Modal Box -->
+    <!-- <div class="CSDoverlay" id="CSDoverlay" onclick="popupToggle();"></div>
+    <div class="CSDmodal" id="CSDmodal">
+      <button class="CSDclose-modal-btn" id="CSDclosebtn" onclick="popupToggle();">&times;</button>
+      <h1 class="CSDmodal-title">Civil Services Day</h1>
+      <p class="CSDmodal-subtitle">STAR welcomes you in our first offline event after pandemic</p>
+      <img class="CSDmodal-image" src="images/home/civil-img.png">
+      <p class="CSDmodal-coming">Coming Soon ...</p>      
+    </div>
+    <script>
+      function popupToggle() {
+        const popup = document.getElementById('CSDmodal');
+        const backdrop = document.getElementById('CSDoverlay');
+        popup.classList.toggle('activePopup');
+        backdrop.classList.toggle('activeBG');
+      }
+      popupToggle();
+    </script> -->
+
+
+
+
+    <!------------------------------- Scribble Day Modal Box ---------------------->
+    <div class="SMPoverlay" id="SMPoverlay" onclick="popupToggle();"></div>
     <div class="SMPmodal" id="SMPmodal">
       <button class="SMPclose-modal-btn" id="SMPclosebtn" onclick="popupToggle();">&times;</button>
-      <h1 class="SMPmodal-title">Student Mentorship Programme</h1>
-      <img class="SMPmodal-image" src="images/home/smp-modal-img.png">
-      <p class="SMPmodal-content">It is a novel initiative undertaken by STAR, UIET, with the aim to enable positive and
-        constructive interaction through the guidance provided by our Alumni to the Students.</p>
-      <a href="/SMP-Programs">
-        <button class="SMPmodal-CTA-btn" id="SMP_btn">
-          Register
-        </button>
-      </a>
-      <h4 class="Time-title">Reg. Begins : <span id="clock"></span></h4>
-      <h4 class="Time-title">Registration Ended </h4>
+      <h1 class="SMPmodal-title">Scribble's Day</h1>
+      <img class="SMPmodal-image" src="images/home/SD2.png">
+      <p class="SMPmodal-content">STAR, UIET, is organising Scrible's Day for our seniors so that they can celebrate and create lifetime memories.</p>
+      <h1 class="Time-title">Dates will be anounced soon</h1>
     </div>
     <script>
       function popupToggle() {
@@ -113,7 +140,11 @@
         backdrop.classList.toggle('activeBG');
       }
       popupToggle();
-    </script> -->
+    </script>
+
+
+
+
 
     <!--    MAIN CAROUSEL   -->
 

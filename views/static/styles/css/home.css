@@ -1692,7 +1692,359 @@ footer .footer-bottom .social-circle a {
 }
 /*# sourceMappingURL=main.css.map */
 
-/* SMP Modal Box CSS */
+/* CSD Modal Box CSS */
+#CSDmodal {
+  background-color: rgb(255, 255, 255);
+  background-image: url("../../images/home/civil-services-bg.png");
+  width: 50%;
+  text-align: center;
+  border-radius: 0.5rem;
+  position: fixed;
+  left: 25%;
+  z-index: 1000;
+  transition: 0.5s;
+  top: -100%;
+  visibility: hidden;
+}
+
+#CSDmodal.activePopup {
+  visibility: visible;
+  top: 20%;
+}
+
+#CSDoverlay {
+  background-color: rgb(51, 50, 50);
+  position: fixed;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  transition: 0.5s;
+  opacity: 80%;
+  visibility: hidden;
+}
+
+#CSDoverlay.activeBG {
+  visibility: visible;
+  top: 0%;
+}
+
+.CSDclose-modal-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  right: 0.8rem;
+  top: 0.5rem;
+  color: rgb(145, 142, 142);
+  z-index: 10;
+}
+
+.CSDclose-modal-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.CSDmodal-title {
+  color: rgb(245, 245, 245);
+  position: relative;
+  left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.CSDmodal-image {
+  float: left;
+  width: 30rem;
+  height: 20rem;
+  z-index: -1;
+}
+
+.CSDmodal-subtitle{
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.CSDmodal-coming{
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  position: relative;
+  top: 8rem;
+  right: 1rem;
+  font-family: 'Satisfy', cursive;
+}
+
+.CSDmodal-content {
+  font-size: 1.5rem;
+  color: #138808;
+  font-family: 'Akshar', sans-serif;
+  font-style: italic;
+  position: relative;
+  right: 12rem;
+  top: 4rem;
+}
+
+.CSDmodal-CTA-btn {
+  position: relative;
+  top: 2.2rem;
+  /* right: 1rem; */
+  background-color: rgb(240, 68, 68);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 45%;
+}
+
+.CSDmodal-CTA-btn:hover {
+  color: rgb(240, 68, 68);
+  background-color: rgb(245, 243, 243);
+  border: 0.1rem solid rgb(240, 68, 68);
+  cursor: pointer;
+}
+
+.Time-title {
+  color: #e21919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 700px) and (max-width: 1300px) {
+  .Time-title {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .Time-title {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .Time-title {
+    margin: 2rem 0rem 1rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .Time-title {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .Time-title {
+    margin-top: -2rem;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .CSDmodal-title {
+    font-size: 2rem;
+  }
+
+  .CSDclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .CSDmodal-image {
+    width: 30rem;
+    height: 20rem;
+    position: relative;
+  }
+
+  .CSDmodal-content {
+    font-size: 1.5rem;
+  }
+
+  .CSDmodal-coming{
+    right: 5rem;
+    top: 12rem;
+  }
+
+  .CSDmodal-CTA-btn {
+    position: relative;
+    top: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 1124px) and (min-width: 1024px){
+  .CSDmodal-image {
+    width: 25rem;
+    height: 15rem;
+    position: relative;
+  }
+
+  .CSDmodal-coming{
+    top: 8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  #CSDmodal {
+    padding-bottom: 1rem;
+  }
+
+  .CSDmodal-title {
+    font-size: 2rem;
+  }
+
+  .CSDclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .CSDmodal-image {
+    width: 22rem;
+    height: 15rem;
+    position: relative;
+    top: 1rem;
+  }
+
+  .CSDmodal-content {
+    font-size: 1rem;
+  }
+
+  .CSDmodal-CTA-btn {
+    position: relative;
+    top: 2rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 868px) and (min-width: 768px){
+  .CSDmodal-image {
+    width: 20rem;
+    height: 13rem;
+    position: relative;
+  }
+
+  .CSDmodal-coming{
+    top: 8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  #CSDmodal {
+    padding-bottom: 1rem;
+    width: 70%;
+    position: fixed;
+    left: 14%;
+  }
+
+  .CSDmodal-title {
+    font-size: 2rem;
+  }
+
+  .CSDclose-modal-btn {
+    position: relative;
+    top: -0.3rem;
+  }
+
+  .CSDmodal-image {
+    width: 23rem;
+    height: 15rem;
+    position: relative;
+    top: 1rem;
+  }
+
+  .CSDmodal-content {
+    font-size: 1rem;
+  }
+
+  .CSDmodal-CTA-btn {
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 483px){
+  .CSDmodal-image {
+    width: 18rem;
+    height: 13rem;
+    position: relative;
+  }
+
+  .CSDmodal-coming{
+    top: 6rem;
+    right: 8rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 483px) and (min-width: 425px){
+  .CSDmodal-image {
+    width: 15rem;
+    height: 10rem;
+    position: relative;
+  }
+
+  .CSDmodal-coming{
+    top: 6rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #CSDmodal {
+    width: 85%;
+    position: fixed;
+    left: 7%;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  #CSDmodal.activePopup {
+    top: 10%;
+  }
+
+  .CSDmodal-title {
+    font-size: 1.8rem;
+  }
+
+  .CSDmodal-image {
+    float: none;
+    width: 23rem;
+    height: 15rem;
+    position: relative;
+    top: 4.2rem;
+  }
+
+  .CSDmodal-coming{
+    font-size: 1.5rem;
+    position: relative;
+    top: -8rem;
+    left: 3rem;
+  }
+
+  .CSDmodal-content {
+    position: relative;
+    top: 0rem;
+  }
+
+  .CSDmodal-CTA-btn {
+    position: relative;
+    top: 0rem;
+    right: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Scribble Day CSS */
 #SMPmodal {
   background-color: rgb(255, 255, 255);
   width: 50%;
@@ -1803,22 +2155,25 @@ footer .footer-bottom .social-circle a {
 @media only screen and (max-width: 699px) {
   .Time-title {
     margin: 0rem 0rem 1rem 0rem;
+    margin-top: 2rem;
   }
 }
 @media only screen and (max-width: 560px) {
   .Time-title {
     margin: 2rem 0rem 1rem 0rem;
+    margin-top: 2rem;
   }
 }
 
 @media only screen and (max-width: 499px) {
   .Time-title {
     margin: 0rem 0rem 1rem 0rem;
+    margin-top: 2rem;
   }
 }
 @media only screen and (max-width: 290px) {
   .Time-title {
-    margin-top: -2rem;
+    margin-top: 2rem;
     font-size: 25px;
   }
 }
