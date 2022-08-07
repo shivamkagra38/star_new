@@ -90,20 +90,21 @@
   <div style="min-height: 100vh">
 
     <!-- SMP Modal Box -->
-    <!-- <div class="SMPoverlay" id="SMPoverlay" onclick="popupToggle();"></div>
+    <div class="SMPoverlay" id="SMPoverlay" onclick="popupToggle();"></div>
     <div class="SMPmodal" id="SMPmodal">
       <button class="SMPclose-modal-btn" id="SMPclosebtn" onclick="popupToggle();">&times;</button>
-      <h1 class="SMPmodal-title">Student Mentorship Programme</h1>
+      <h1 class="SMPmodal-title">News Letter Registration</h1>
       <img class="SMPmodal-image" src="images/home/smp-modal-img.png">
       <p class="SMPmodal-content">It is a novel initiative undertaken by STAR, UIET, with the aim to enable positive and
         constructive interaction through the guidance provided by our Alumni to the Students.</p>
-      <a href="/SMP-Programs">
-        <button class="SMPmodal-CTA-btn" id="SMP_btn">
+      <div>
+      <a href="/News-Letter-Registration" class="disabled">
+        <button class="SMPmodal-CTA-btn" id="SMP_btn" disabled>
           Register
         </button>
-      </a>
+    </div>
       <h4 class="Time-title">Reg. Begins : <span id="clock"></span></h4>
-      <h4 class="Time-title">Registration Ended </h4>
+      <!-- <h4 class="Time-title">Registration Ended </h4> -->
     </div>
     <script>
       function popupToggle() {
@@ -113,7 +114,7 @@
         backdrop.classList.toggle('activeBG');
       }
       popupToggle();
-    </script> -->
+    </script>
 
     <!--    MAIN CAROUSEL   -->
 
@@ -560,32 +561,31 @@
   </section>
   <script>
     var btnSMP = document.getElementById("SMP_btn");
-    var countDownDate = new Date("Feb 17, 2022 12:00:00").getTime();
+    var countDownDate = new Date("Aug 8, 2022 12:00:00").getTime();
 
     var x = setInterval(function () {
 
-      var now = new Date().getTime();
+    var now = new Date().getTime();
 
 
-      var distance = countDownDate - now;
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("clock").innerHTML = " " + days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
 
 
-      document.getElementById("clock").innerHTML = " " + days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("clock").innerHTML = "Forms Are Out !";
-        btnSMP.style.display = "initial";
-      }
-    }, 1000);
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("clock").innerHTML = "Forms Are Out !";
+      btnSMP.style.display = "initial";
+    }
+  }, 1000);
 
   </script>
   <%- include("partials/footer"); -%>

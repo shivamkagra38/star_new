@@ -1,0 +1,117 @@
+<%- include("partials/header(res)"); -%>
+<div class="shadow">
+    <img class ="pagehead" src="images/headers/Safarnama-Poster.jpg" alt="">
+</div>
+
+<section id="safarnamaform">
+    <form method="post" autocomplete="off" name="google-sheet" id="safarnama">
+        <!-- Heading -->
+            <h4><b>News-Letter-Registration Form</b></h4>
+        <!-- /Heading-->
+        <!-- Form -->
+            <p>Name</p>
+            <input type="text" placeholder="Name" name="Name" required/>
+
+            <p>E-mail Id</p>
+            <input type="email" placeholder="E-mail" name="Email" required/>
+
+            <p>Are You an Alumni of UIET</p>
+            <div class="Alumni">
+                <input type="radio" name="Alumni" value="Yes" required/><label for="Alumni">Yes</label><br>
+                <div class="ifyes">
+                    <p>Batch of Year</p>
+                        <input type="number" placeholder="Batch of Year" name="BatchOfYear" />
+                    <p>BRANCH</p>
+                        <div class="branch">
+                        <input type="radio" name="Branch" value="CSE"/><label for="Branch">Computer Science</label><br>
+                        <input type="radio" name="Branch" value="I.T"/><label for="Branch">Information Technology</label><br>
+                        <input type="radio" name="Branch" value="ECE"/><label for="Branch">Electronics And Communication</label><br>
+                        <input type="radio" name="Branch" value="EEE"/><label for="Branch">Electrical And Electronics Engineering</label><br>
+                        <input type="radio" name="Branch" value="Mech"/><label for="Branch">Mechanical</label><br>
+                        <input type="radio" name="Branch" value="BioTech"/><label for="Branch">BioTechnology</label><br>
+                        </div>
+                    <p>Current Organization</p>
+                        <input type="text" placeholder="Current Organization" name="CurrentOrg"/>
+                </div>
+                <input type="radio" name="Alumni" value="No" required/><label for="Alumni">No</label><br>
+                <div class="ifno">
+                    <p>BRANCH</p>
+                        <div class="branch">
+                        <input type="radio" name="Branch" value="CSE" /><label for="Branch">Computer Science</label><br>
+                        <input type="radio" name="Branch" value="I.T"/><label for="Branch">Information Technology</label><br>
+                        <input type="radio" name="Branch" value="ECE" /><label for="Branch">Electronics And Communication</label><br>
+                        <input type="radio" name="Branch" value="EEE"/><label for="Branch">Electrical And Electronics Engineering</label><br>
+                        <input type="radio" name="Branch" value="Mech"/><label for="Branch">Mechanical</label><br>
+                        <input type="radio" name="Branch" value="BioTech"/><label for="Branch">BioTechnology</label><br>
+                        </div>
+                    <p>Year of Passing</p>
+                        <input type="text" placeholder="Year of Passing" name="YearOfPassing"/>
+                </div>
+            </div>
+        <!-- /Form -->
+    </form>
+    <h5 id="tcs"></h5>
+</section>
+<input type="submit" class="button btn-submit" id="submit" form="safarnama"></input>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="index.js"></script>
+<script>
+// ALUMNI-YES OR NO
+function change(){
+    for(const radioButton of radioButtons){
+    if (radioButton.checked) {
+                            if(radioButton.value == "Yes")
+                            {
+                                document.getElementsByClassName("ifyes")[0].classList.add("yesdisplay");
+                                document.getElementsByClassName("ifno")[0].classList.remove("nodisplay");
+                            }
+                            else
+                            {
+                                document.getElementsByClassName("ifno")[0].classList.add("nodisplay");
+                                document.getElementsByClassName("ifyes")[0].classList.remove("yesdisplay");
+                            }
+                    }
+                }
+}
+const radioButtons = document.querySelectorAll('input[name="Alumni"]');
+            for(const radioButton of radioButtons){
+                radioButton.addEventListener('click',()=>{
+                        change();
+                });
+            }
+
+// SUBMIT BUTTON
+  var i=0;
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyB506X0C04DChefX3c_34_f5cbU2udGHIfvQh8BH8geSpcO2ME9m_KRst31BAY7_ZehA/exec'
+  const form = document.forms['google-sheet']
+  form.addEventListener('submit', e => {
+    if(i==0)
+    {
+      document.getElementById("tcs").textContent="Wait...";
+      document.getElementById("tcs").style.fontSize="17px";
+      document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
+      document.getElementById("tcs").style.margin="auto";
+      document.getElementById("tcs").style.padding="25px 0 0 0";
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.getElementById("tcs").textContent="Form Submitted Successfully !", document.getElementById("tcs").style.color="green")
+        .catch(error => console.error('Error!', error.message))
+      form.reset();
+      i++;
+    }
+    else
+    {
+      document.getElementById("tcs").textContent="Form has already been Submitted !";
+      document.getElementById("tcs").style.fontSize="17px";
+      document.getElementById("tcs").style.fontFamily="'Roboto Slab', serif";
+      document.getElementById("tcs").style.margin="auto";
+      document.getElementById("tcs").style.padding="25px 0 0 0";
+      document.getElementById("tcs").style.color="red";
+      e.preventDefault();
+    }
+  })
+
+</script>
+<%- include("partials/footer"); -%>

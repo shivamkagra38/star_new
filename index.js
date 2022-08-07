@@ -131,6 +131,9 @@ app.get("/smp", launchStatus, function (req, res) {
   res.render("smpform");
 });
 
+app.get("/News-Letter-Registration", launchStatus, function (req, res) {
+  res.render("News-Letter-Registration");
+});
 
 app.post("/message", async (req, res) => {
   let userData = [
