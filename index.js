@@ -5,6 +5,7 @@ const { strict } = require("assert");
 // const mongoose = require('mongoose')
 const path = require("path");
 const { google } = require("googleapis");
+const nodemailer = require('nodemailer');
 require('dotenv').config()
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -72,7 +73,31 @@ async function writeMessageData(arr) {
   }
 }
 
-
+function send_newsletter() {
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: 'jamison.funk48@ethereal.email',
+        pass: 'Sc9VEj8BnUxr6jfDfp'
+    }
+  });
+  
+  const mailOptions = {
+    from: 'jamison.funk48@ethereal.email',
+    to: 'jatinalwar2001@gmail.com',
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy!'
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });  
+}
 
 
 let launchStatusCode = true // Timer
@@ -187,6 +212,15 @@ app.get("/fullteam", launchStatus, (req, res) => {
 app.get('/activate', notLaunchStatus, (req, res) => {
   launchStatusCode = true;
   res.render('index')
+})
+
+app.get('/newsletter', (req, res) => {
+  res.render('newsletter-mail');
+})
+
+app.post('/send1', (req, res) => {
+  send_newsletter()
+  res.send("Newsletter is delivered to all subscribers successfully.");
 })
 
 app.put('/setActivation', (req, res) => {
